@@ -26,14 +26,6 @@ import org.apache.http.util.EntityUtils;
 
 public class SendHttp {
 
-	/**
-	 * 发送get请求
-	 * 
-	 * @param geturl
-	 * @throws ClientProtocolException
-	 * @throws IOException
-	 * @throws URISyntaxException
-	 */
 	public static void sendGet(String geturi, List<NameValuePair> prarmeters, Header[] headers) throws ClientProtocolException, IOException, URISyntaxException {
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		HttpHost proxy = new HttpHost("192.168.4.69", 8888);
@@ -44,7 +36,6 @@ public class SendHttp {
 			httpget.setConfig(config);
 			httpget.setHeaders(headers);
 			System.out.println("Executing request " + httpget.getRequestLine());
-			// Create a custom response handler
 			ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
 				public String handleResponse(final HttpResponse response) throws ClientProtocolException, IOException {
 					int status = response.getStatusLine().getStatusCode();
@@ -73,7 +64,6 @@ public class SendHttp {
 			httppost.setHeaders(headers);
 			httppost.setEntity(new UrlEncodedFormEntity(prarmeters, "UTF-8"));
 			System.out.println("Executing request " + httppost.getRequestLine());
-			// Create a custom response handler
 			ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
 				public String handleResponse(final HttpResponse response) throws ClientProtocolException, IOException {
 					int status = response.getStatusLine().getStatusCode();
@@ -93,26 +83,21 @@ public class SendHttp {
 	}
 
 	public final static void main(String[] args) throws Exception {
-		for (int i = 0; i < 1000; i++) {
-			System.out.println(i);
-			Thread.sleep(5000);
-		}
-		//GET
-		// List<NameValuePair> prarmeters = new ArrayList<NameValuePair>();
-		// prarmeters.add(new BasicNameValuePair("device", "android"));
-		// prarmeters.add(new BasicNameValuePair("per_page", "40"));
-		// prarmeters.add(new BasicNameValuePair("category", "all"));
-		// prarmeters.add(new BasicNameValuePair("type", "album"));
-		// prarmeters.add(new BasicNameValuePair("page", "1"));
-		// Header[] headers = { new BasicHeader("User-Agent",
-		// "ting_2.0.51(ZTE U930,Android15)"), new BasicHeader("Accept", "*/*"),
-		// new BasicHeader("Host", "mobile.ximalaya.com"),
-		// new BasicHeader("Cookie",
-		// "1&_device=android&ffffffff-e734-d3b0-de75-99ce0037d7ef&2.0.51; impl=standard"),
-		// new BasicHeader("Cookie2", "$Version=1"),
-		// new BasicHeader("Accept-Encoding", "") };
-		// sendGet("http://mobile.ximalaya.com/m/category_tag_list", prarmeters,
-		// headers);
+		// for (int i = 0; i < 1000; i++) {
+		// System.out.println(i);
+		// Thread.sleep(5000);
+		// }
+		// GET
+		List<NameValuePair> prarmeters = new ArrayList<NameValuePair>();
+		prarmeters.add(new BasicNameValuePair("device", "android"));
+		prarmeters.add(new BasicNameValuePair("per_page", "40"));
+		prarmeters.add(new BasicNameValuePair("category", "all"));
+		prarmeters.add(new BasicNameValuePair("type", "album"));
+		prarmeters.add(new BasicNameValuePair("page", "1"));
+		Header[] headers = { new BasicHeader("User-Agent", "ting_2.0.51(ZTE U930,Android15)"), new BasicHeader("Accept", "*/*"), new BasicHeader("Host", "mobile.ximalaya.com"),
+				new BasicHeader("Cookie", "1&_device=android&ffffffff-e734-d3b0-de75-99ce0037d7ef&2.0.51; impl=standard"), new BasicHeader("Cookie2", "$Version=1"),
+				new BasicHeader("Accept-Encoding", "") };
+		sendGet("http://mobile.ximalaya.com/m/category_tag_list", prarmeters, headers);
 
 		// POST
 		List<NameValuePair> postprar = new ArrayList<NameValuePair>();
