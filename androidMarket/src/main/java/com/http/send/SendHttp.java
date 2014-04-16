@@ -1,4 +1,4 @@
-package com.http;
+package com.http.send;
 
 import java.io.IOException;
 import java.net.URI;
@@ -24,7 +24,7 @@ import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
-public class Main {
+public class SendHttp {
 
 	/**
 	 * 发送get请求
