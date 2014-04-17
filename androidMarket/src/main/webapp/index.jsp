@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>Android Market</title>
 </head>
 <body>
-	<a href="index.html">Say Hello</a>
+	<h3>Android Market</h3>
+	<br />
+	<a href="getRequest.html">Send get request</a>
+	<br />
+	<a href="postRequest.html">Send post request</a>
 </body>
 </html>

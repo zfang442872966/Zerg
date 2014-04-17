@@ -7,6 +7,17 @@
 <title></title>
 </head>
 <body>
-	<h1>${message}</h1>
+	<table>
+
+		<tr>
+			<td><h4>response</h4></td>
+		</tr>
+		<tr>
+			<td>${get}</td>
+		</tr>
+		<tr>
+			<td>${post}</td>
+		</tr>
+	</table>
 </body>
 </html>

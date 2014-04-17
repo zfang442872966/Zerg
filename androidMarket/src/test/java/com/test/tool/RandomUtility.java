@@ -1,4 +1,4 @@
-package com.market.utility;
+package com.test.tool;
 
 import java.util.Random;
 
