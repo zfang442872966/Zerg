@@ -1,4 +1,4 @@
-package com.random.utility;
+package com.market.utility;
 
 import java.util.Random;
 
