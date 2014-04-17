@@ -3,7 +3,6 @@ package com.market.utility;
 import java.util.Random;
 
 public class RandomUtility {
-
 	public final static String NUMBER = "0123456789";
 	public final static String LETTER = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	public final static String CHARACTER_LETTER = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -21,6 +20,5 @@ public class RandomUtility {
 
 	public static void main(String[] args) {
 		System.out.println(new Random().nextInt(10));
-		System.out.println(getRandomString(NUMBER, 10));
 	}
 }
