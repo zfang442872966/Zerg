@@ -11,13 +11,4 @@ public interface RandomService {
 	public final static String CHARACTER_LETTER = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	public final static String LOWERCASE_LETTERS = "abcdefghijklmnopqrstuvwxyz";
 	public final static String UPPERCASE_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-	/**
-	 * Get random string
-	 * 
-	 * @param string
-	 * @param length
-	 * @return
-	 */
-	public String getRandomString(String string, int length);
 }
