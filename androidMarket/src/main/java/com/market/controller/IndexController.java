@@ -68,16 +68,28 @@ public class IndexController {
 		for (int i = 0; i < frequency; i++) {
 			// Send post request
 			List<NameValuePair> postprar = new ArrayList<NameValuePair>();
-			postprar.add(new BasicNameValuePair("device", "android"));
-			postprar.add(new BasicNameValuePair("pageSize", "37"));
-			postprar.add(new BasicNameValuePair("isDown", "false"));
-			postprar.add(new BasicNameValuePair("key", "0"));
-			Header[] psotheaders = { new BasicHeader("user-agent", "ting_2.0.51(ZTE U930,Android15)"), new BasicHeader("Accept", "*/*"),
-					new BasicHeader("Content-Type", "application/x-www-form-urlencoded"), new BasicHeader("Host", "mobile.ximalaya.com"), new BasicHeader("Expect", "100-continue"),
-					new BasicHeader("Cookie", "1&_device=android&ffffffff-e734-d3b0-de75-99ce0037d7ef&2.0.51; 1&_token=4236734&0200634403da904d310af4407ee4b969f1f7; impl=standard"),
-					new BasicHeader("Cookie2", "$Version=1"), new BasicHeader("Accept-Encoding", "") };
+			// postprar.add(new BasicNameValuePair("device", "android"));
+			// postprar.add(new BasicNameValuePair("pageSize", "37"));
+			// postprar.add(new BasicNameValuePair("isDown", "false"));
+			// postprar.add(new BasicNameValuePair("key", "0"));
+			Header[] psotheaders = { 
+					new BasicHeader("Connection", "Close"),
+					new BasicHeader("User-Agent", "ZTE+U930/4.0.3/Market/V3.3.0"),
+					new BasicHeader("Ext-System", "ZTE U930/4.0.3/0/2/2/V3.3.0/20"),
+					new BasicHeader("Ext-User", "-1/863994013262092/0"),
+					new BasicHeader("Content-Type", "application/octet-stream"),
+					new BasicHeader("Accept-Encoding", "gzip"),
+					new BasicHeader("Screen", "960#540"),
+					new BasicHeader("VersionCode", "330"), 
+					new BasicHeader("brand", "generic"),
+					new BasicHeader("rom", "2"),
+					new BasicHeader("desktop", "desktop_other"),
+					new BasicHeader("SourcePath", "PAHA-PHYY"),
+					new BasicHeader("ImgType", "webp"),
+					new BasicHeader("Host", "i3.store.nearme.com.cn"),
+			};
 			try {
-				sendHttpRequest.sendPost("http://mobile.ximalaya.com/mobile/message/in", postprar, psotheaders);
+				sendHttpRequest.sendPost("http://i3.store.nearme.com.cn/client/get_hot_app.pb", postprar, psotheaders);
 				successes += 1;
 			} catch (ClientProtocolException e) {
 				e.printStackTrace();
