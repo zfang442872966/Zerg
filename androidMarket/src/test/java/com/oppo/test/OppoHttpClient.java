@@ -17,6 +17,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicHeader;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 public class OppoHttpClient {
@@ -40,7 +41,8 @@ public class OppoHttpClient {
 		};
 		
 		List<NameValuePair> postprar = new ArrayList<NameValuePair>();
-		
+		postprar.add(new BasicNameValuePair("device", "android"));
+
 		String responseBody = null;
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		HttpHost proxy = new HttpHost("192.168.4.69", 8888);
