@@ -116,6 +116,7 @@ public class OppoHttpURLConnection {
 	}
 
 	public static void main(String[] args) throws IOException {
+		// 应用排行
 		// [8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 16, 15, 24, 20, 32, 0, 42,
 		// 8, 90, 84, 69, 32, 85, 57, 51, 48, 56, 7, 80, 1, 120, 1]
 
