@@ -146,13 +146,14 @@ public class OppoHttpURLConnection {
 
 		// [8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 16, 15, 24, 20, 32, -76,
 		// 1, 42, 8, 90, 84, 69, 32, 85, 57, 51, 48, 64, 3, 80, 1, 120, 1]
-
+		
 		byte[] abyte0 = { 8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 16, 15, 24, 20, 32, 0, 42, 8, 90, 84, 69, 32, 85, 57, 51, 48, 56, 7, 80, 1, 120, 1 };
 		System.out.println(new String(abyte0));
+		System.out.println(Arrays.toString(abyte0));
 		System.out.println("------------------------------------------------------------------------------");
 		byte[] result = httpURLConnection("http://i3.store.nearme.com.cn/client/get_hot_app.pb", abyte0);
 		System.out.println(new String(decompressGzip(result)));
-		System.out.println("------------------------------------------------------------------------------");
 		System.out.println(Arrays.toString(decompressGzip(result)));
+		System.out.println("------------------------------------------------------------------------------");
 	}
 }
