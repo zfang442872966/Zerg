@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
+import com.example.tutorial.PublishProductProtocol;
+
 /**
  * 
  * @author zfang
@@ -155,5 +157,6 @@ public class OppoHttpURLConnection {
 		System.out.println(new String(decompressGzip(result)));
 		System.out.println(Arrays.toString(decompressGzip(result)));
 		System.out.println("------------------------------------------------------------------------------");
+		PublishProductProtocol.PublishProductList localPublishProductList = PublishProductProtocol.PublishProductList.parseFrom(decompressGzip(result));
 	}
 }
