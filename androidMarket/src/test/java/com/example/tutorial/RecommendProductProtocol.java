@@ -11,80 +11,47 @@ public final class RecommendProductProtocol {
   public interface HomeRecommendOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // repeated .tutorial.PublishProductList productList = 1;
+    // optional .tutorial.PublishProductList productList = 1;
     /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+     * <code>optional .tutorial.PublishProductList productList = 1;</code>
      */
-    java.util.List<com.example.tutorial.RecommendProductProtocol.PublishProductList> 
-        getProductListList();
+    boolean hasProductList();
     /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+     * <code>optional .tutorial.PublishProductList productList = 1;</code>
      */
-    com.example.tutorial.RecommendProductProtocol.PublishProductList getProductList(int index);
+    com.example.tutorial.RecommendProductProtocol.PublishProductList getProductList();
     /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+     * <code>optional .tutorial.PublishProductList productList = 1;</code>
      */
-    int getProductListCount();
-    /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-     */
-    java.util.List<? extends com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder> 
-        getProductListOrBuilderList();
-    /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-     */
-    com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder getProductListOrBuilder(
-        int index);
+    com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder getProductListOrBuilder();
 
-    // repeated .tutorial.AdvertisementList adList = 2;
+    // optional .tutorial.AdvertisementList adList = 2;
     /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+     * <code>optional .tutorial.AdvertisementList adList = 2;</code>
      */
-    java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> 
-        getAdListList();
+    boolean hasAdList();
     /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+     * <code>optional .tutorial.AdvertisementList adList = 2;</code>
      */
-    com.example.tutorial.RecommendProductProtocol.AdvertisementList getAdList(int index);
+    com.example.tutorial.RecommendProductProtocol.AdvertisementList getAdList();
     /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+     * <code>optional .tutorial.AdvertisementList adList = 2;</code>
      */
-    int getAdListCount();
-    /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-     */
-    java.util.List<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> 
-        getAdListOrBuilderList();
-    /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-     */
-    com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getAdListOrBuilder(
-        int index);
+    com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getAdListOrBuilder();
 
-    // repeated .tutorial.AdvertisementList smallAdList = 3;
+    // optional .tutorial.AdvertisementList smallAdList = 3;
     /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+     * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
      */
-    java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> 
-        getSmallAdListList();
+    boolean hasSmallAdList();
     /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+     * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
      */
-    com.example.tutorial.RecommendProductProtocol.AdvertisementList getSmallAdList(int index);
+    com.example.tutorial.RecommendProductProtocol.AdvertisementList getSmallAdList();
     /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+     * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
      */
-    int getSmallAdListCount();
-    /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-     */
-    java.util.List<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> 
-        getSmallAdListOrBuilderList();
-    /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-     */
-    com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getSmallAdListOrBuilder(
-        int index);
+    com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getSmallAdListOrBuilder();
 
     // repeated string extension = 4;
     /**
@@ -158,27 +125,42 @@ public final class RecommendProductProtocol {
               break;
             }
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                productList_ = new java.util.ArrayList<com.example.tutorial.RecommendProductProtocol.PublishProductList>();
-                mutable_bitField0_ |= 0x00000001;
+              com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = productList_.toBuilder();
               }
-              productList_.add(input.readMessage(com.example.tutorial.RecommendProductProtocol.PublishProductList.PARSER, extensionRegistry));
+              productList_ = input.readMessage(com.example.tutorial.RecommendProductProtocol.PublishProductList.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(productList_);
+                productList_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                adList_ = new java.util.ArrayList<com.example.tutorial.RecommendProductProtocol.AdvertisementList>();
-                mutable_bitField0_ |= 0x00000002;
+              com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = adList_.toBuilder();
               }
-              adList_.add(input.readMessage(com.example.tutorial.RecommendProductProtocol.AdvertisementList.PARSER, extensionRegistry));
+              adList_ = input.readMessage(com.example.tutorial.RecommendProductProtocol.AdvertisementList.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(adList_);
+                adList_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                smallAdList_ = new java.util.ArrayList<com.example.tutorial.RecommendProductProtocol.AdvertisementList>();
-                mutable_bitField0_ |= 0x00000004;
+              com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = smallAdList_.toBuilder();
               }
-              smallAdList_.add(input.readMessage(com.example.tutorial.RecommendProductProtocol.AdvertisementList.PARSER, extensionRegistry));
+              smallAdList_ = input.readMessage(com.example.tutorial.RecommendProductProtocol.AdvertisementList.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(smallAdList_);
+                smallAdList_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
               break;
             }
             case 34: {
@@ -197,15 +179,6 @@ public final class RecommendProductProtocol {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          productList_ = java.util.Collections.unmodifiableList(productList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          adList_ = java.util.Collections.unmodifiableList(adList_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          smallAdList_ = java.util.Collections.unmodifiableList(smallAdList_);
-        }
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           extension_ = new com.google.protobuf.UnmodifiableLazyStringList(extension_);
         }
@@ -240,112 +213,71 @@ public final class RecommendProductProtocol {
       return PARSER;
     }
 
-    // repeated .tutorial.PublishProductList productList = 1;
+    private int bitField0_;
+    // optional .tutorial.PublishProductList productList = 1;
     public static final int PRODUCTLIST_FIELD_NUMBER = 1;
-    private java.util.List<com.example.tutorial.RecommendProductProtocol.PublishProductList> productList_;
+    private com.example.tutorial.RecommendProductProtocol.PublishProductList productList_;
     /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+     * <code>optional .tutorial.PublishProductList productList = 1;</code>
      */
-    public java.util.List<com.example.tutorial.RecommendProductProtocol.PublishProductList> getProductListList() {
+    public boolean hasProductList() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .tutorial.PublishProductList productList = 1;</code>
+     */
+    public com.example.tutorial.RecommendProductProtocol.PublishProductList getProductList() {
       return productList_;
     }
     /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+     * <code>optional .tutorial.PublishProductList productList = 1;</code>
      */
-    public java.util.List<? extends com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder> 
-        getProductListOrBuilderList() {
+    public com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder getProductListOrBuilder() {
       return productList_;
-    }
-    /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-     */
-    public int getProductListCount() {
-      return productList_.size();
-    }
-    /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-     */
-    public com.example.tutorial.RecommendProductProtocol.PublishProductList getProductList(int index) {
-      return productList_.get(index);
-    }
-    /**
-     * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-     */
-    public com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder getProductListOrBuilder(
-        int index) {
-      return productList_.get(index);
     }
 
-    // repeated .tutorial.AdvertisementList adList = 2;
+    // optional .tutorial.AdvertisementList adList = 2;
     public static final int ADLIST_FIELD_NUMBER = 2;
-    private java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> adList_;
+    private com.example.tutorial.RecommendProductProtocol.AdvertisementList adList_;
     /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+     * <code>optional .tutorial.AdvertisementList adList = 2;</code>
      */
-    public java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> getAdListList() {
+    public boolean hasAdList() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .tutorial.AdvertisementList adList = 2;</code>
+     */
+    public com.example.tutorial.RecommendProductProtocol.AdvertisementList getAdList() {
       return adList_;
     }
     /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+     * <code>optional .tutorial.AdvertisementList adList = 2;</code>
      */
-    public java.util.List<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> 
-        getAdListOrBuilderList() {
+    public com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getAdListOrBuilder() {
       return adList_;
-    }
-    /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-     */
-    public int getAdListCount() {
-      return adList_.size();
-    }
-    /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-     */
-    public com.example.tutorial.RecommendProductProtocol.AdvertisementList getAdList(int index) {
-      return adList_.get(index);
-    }
-    /**
-     * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-     */
-    public com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getAdListOrBuilder(
-        int index) {
-      return adList_.get(index);
     }
 
-    // repeated .tutorial.AdvertisementList smallAdList = 3;
+    // optional .tutorial.AdvertisementList smallAdList = 3;
     public static final int SMALLADLIST_FIELD_NUMBER = 3;
-    private java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> smallAdList_;
+    private com.example.tutorial.RecommendProductProtocol.AdvertisementList smallAdList_;
     /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+     * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
      */
-    public java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> getSmallAdListList() {
+    public boolean hasSmallAdList() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
+     */
+    public com.example.tutorial.RecommendProductProtocol.AdvertisementList getSmallAdList() {
       return smallAdList_;
     }
     /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+     * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
      */
-    public java.util.List<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> 
-        getSmallAdListOrBuilderList() {
+    public com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getSmallAdListOrBuilder() {
       return smallAdList_;
-    }
-    /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-     */
-    public int getSmallAdListCount() {
-      return smallAdList_.size();
-    }
-    /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-     */
-    public com.example.tutorial.RecommendProductProtocol.AdvertisementList getSmallAdList(int index) {
-      return smallAdList_.get(index);
-    }
-    /**
-     * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-     */
-    public com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getSmallAdListOrBuilder(
-        int index) {
-      return smallAdList_.get(index);
     }
 
     // repeated string extension = 4;
@@ -379,9 +311,9 @@ public final class RecommendProductProtocol {
     }
 
     private void initFields() {
-      productList_ = java.util.Collections.emptyList();
-      adList_ = java.util.Collections.emptyList();
-      smallAdList_ = java.util.Collections.emptyList();
+      productList_ = com.example.tutorial.RecommendProductProtocol.PublishProductList.getDefaultInstance();
+      adList_ = com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
+      smallAdList_ = com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
       extension_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
@@ -396,14 +328,14 @@ public final class RecommendProductProtocol {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      for (int i = 0; i < productList_.size(); i++) {
-        output.writeMessage(1, productList_.get(i));
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, productList_);
       }
-      for (int i = 0; i < adList_.size(); i++) {
-        output.writeMessage(2, adList_.get(i));
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, adList_);
       }
-      for (int i = 0; i < smallAdList_.size(); i++) {
-        output.writeMessage(3, smallAdList_.get(i));
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, smallAdList_);
       }
       for (int i = 0; i < extension_.size(); i++) {
         output.writeBytes(4, extension_.getByteString(i));
@@ -417,17 +349,17 @@ public final class RecommendProductProtocol {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < productList_.size(); i++) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, productList_.get(i));
+          .computeMessageSize(1, productList_);
       }
-      for (int i = 0; i < adList_.size(); i++) {
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, adList_.get(i));
+          .computeMessageSize(2, adList_);
       }
-      for (int i = 0; i < smallAdList_.size(); i++) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, smallAdList_.get(i));
+          .computeMessageSize(3, smallAdList_);
       }
       {
         int dataSize = 0;
@@ -558,23 +490,23 @@ public final class RecommendProductProtocol {
       public Builder clear() {
         super.clear();
         if (productListBuilder_ == null) {
-          productList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          productList_ = com.example.tutorial.RecommendProductProtocol.PublishProductList.getDefaultInstance();
         } else {
           productListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (adListBuilder_ == null) {
-          adList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          adList_ = com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
         } else {
           adListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (smallAdListBuilder_ == null) {
-          smallAdList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          smallAdList_ = com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
         } else {
           smallAdListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         extension_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
@@ -604,29 +536,27 @@ public final class RecommendProductProtocol {
       public com.example.tutorial.RecommendProductProtocol.HomeRecommend buildPartial() {
         com.example.tutorial.RecommendProductProtocol.HomeRecommend result = new com.example.tutorial.RecommendProductProtocol.HomeRecommend(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
         if (productListBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            productList_ = java.util.Collections.unmodifiableList(productList_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
           result.productList_ = productList_;
         } else {
           result.productList_ = productListBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
         if (adListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            adList_ = java.util.Collections.unmodifiableList(adList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
           result.adList_ = adList_;
         } else {
           result.adList_ = adListBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
         if (smallAdListBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            smallAdList_ = java.util.Collections.unmodifiableList(smallAdList_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
           result.smallAdList_ = smallAdList_;
         } else {
           result.smallAdList_ = smallAdListBuilder_.build();
@@ -637,6 +567,7 @@ public final class RecommendProductProtocol {
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.extension_ = extension_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -652,83 +583,14 @@ public final class RecommendProductProtocol {
 
       public Builder mergeFrom(com.example.tutorial.RecommendProductProtocol.HomeRecommend other) {
         if (other == com.example.tutorial.RecommendProductProtocol.HomeRecommend.getDefaultInstance()) return this;
-        if (productListBuilder_ == null) {
-          if (!other.productList_.isEmpty()) {
-            if (productList_.isEmpty()) {
-              productList_ = other.productList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureProductListIsMutable();
-              productList_.addAll(other.productList_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.productList_.isEmpty()) {
-            if (productListBuilder_.isEmpty()) {
-              productListBuilder_.dispose();
-              productListBuilder_ = null;
-              productList_ = other.productList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              productListBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getProductListFieldBuilder() : null;
-            } else {
-              productListBuilder_.addAllMessages(other.productList_);
-            }
-          }
+        if (other.hasProductList()) {
+          mergeProductList(other.getProductList());
         }
-        if (adListBuilder_ == null) {
-          if (!other.adList_.isEmpty()) {
-            if (adList_.isEmpty()) {
-              adList_ = other.adList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureAdListIsMutable();
-              adList_.addAll(other.adList_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.adList_.isEmpty()) {
-            if (adListBuilder_.isEmpty()) {
-              adListBuilder_.dispose();
-              adListBuilder_ = null;
-              adList_ = other.adList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              adListBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getAdListFieldBuilder() : null;
-            } else {
-              adListBuilder_.addAllMessages(other.adList_);
-            }
-          }
+        if (other.hasAdList()) {
+          mergeAdList(other.getAdList());
         }
-        if (smallAdListBuilder_ == null) {
-          if (!other.smallAdList_.isEmpty()) {
-            if (smallAdList_.isEmpty()) {
-              smallAdList_ = other.smallAdList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureSmallAdListIsMutable();
-              smallAdList_.addAll(other.smallAdList_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.smallAdList_.isEmpty()) {
-            if (smallAdListBuilder_.isEmpty()) {
-              smallAdListBuilder_.dispose();
-              smallAdListBuilder_ = null;
-              smallAdList_ = other.smallAdList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              smallAdListBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getSmallAdListFieldBuilder() : null;
-            } else {
-              smallAdListBuilder_.addAllMessages(other.smallAdList_);
-            }
-          }
+        if (other.hasSmallAdList()) {
+          mergeSmallAdList(other.getSmallAdList());
         }
         if (!other.extension_.isEmpty()) {
           if (extension_.isEmpty()) {
@@ -767,239 +629,116 @@ public final class RecommendProductProtocol {
       }
       private int bitField0_;
 
-      // repeated .tutorial.PublishProductList productList = 1;
-      private java.util.List<com.example.tutorial.RecommendProductProtocol.PublishProductList> productList_ =
-        java.util.Collections.emptyList();
-      private void ensureProductListIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          productList_ = new java.util.ArrayList<com.example.tutorial.RecommendProductProtocol.PublishProductList>(productList_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
+      // optional .tutorial.PublishProductList productList = 1;
+      private com.example.tutorial.RecommendProductProtocol.PublishProductList productList_ = com.example.tutorial.RecommendProductProtocol.PublishProductList.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
           com.example.tutorial.RecommendProductProtocol.PublishProductList, com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder, com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder> productListBuilder_;
-
       /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+       * <code>optional .tutorial.PublishProductList productList = 1;</code>
        */
-      public java.util.List<com.example.tutorial.RecommendProductProtocol.PublishProductList> getProductListList() {
+      public boolean hasProductList() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .tutorial.PublishProductList productList = 1;</code>
+       */
+      public com.example.tutorial.RecommendProductProtocol.PublishProductList getProductList() {
         if (productListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(productList_);
+          return productList_;
         } else {
-          return productListBuilder_.getMessageList();
+          return productListBuilder_.getMessage();
         }
       }
       /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+       * <code>optional .tutorial.PublishProductList productList = 1;</code>
        */
-      public int getProductListCount() {
+      public Builder setProductList(com.example.tutorial.RecommendProductProtocol.PublishProductList value) {
         if (productListBuilder_ == null) {
-          return productList_.size();
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          productList_ = value;
+          onChanged();
         } else {
-          return productListBuilder_.getCount();
+          productListBuilder_.setMessage(value);
         }
+        bitField0_ |= 0x00000001;
+        return this;
       }
       /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public com.example.tutorial.RecommendProductProtocol.PublishProductList getProductList(int index) {
-        if (productListBuilder_ == null) {
-          return productList_.get(index);
-        } else {
-          return productListBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+       * <code>optional .tutorial.PublishProductList productList = 1;</code>
        */
       public Builder setProductList(
-          int index, com.example.tutorial.RecommendProductProtocol.PublishProductList value) {
-        if (productListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureProductListIsMutable();
-          productList_.set(index, value);
-          onChanged();
-        } else {
-          productListBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public Builder setProductList(
-          int index, com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder builderForValue) {
-        if (productListBuilder_ == null) {
-          ensureProductListIsMutable();
-          productList_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          productListBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public Builder addProductList(com.example.tutorial.RecommendProductProtocol.PublishProductList value) {
-        if (productListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureProductListIsMutable();
-          productList_.add(value);
-          onChanged();
-        } else {
-          productListBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public Builder addProductList(
-          int index, com.example.tutorial.RecommendProductProtocol.PublishProductList value) {
-        if (productListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureProductListIsMutable();
-          productList_.add(index, value);
-          onChanged();
-        } else {
-          productListBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public Builder addProductList(
           com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder builderForValue) {
         if (productListBuilder_ == null) {
-          ensureProductListIsMutable();
-          productList_.add(builderForValue.build());
+          productList_ = builderForValue.build();
           onChanged();
         } else {
-          productListBuilder_.addMessage(builderForValue.build());
+          productListBuilder_.setMessage(builderForValue.build());
         }
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+       * <code>optional .tutorial.PublishProductList productList = 1;</code>
        */
-      public Builder addProductList(
-          int index, com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder builderForValue) {
+      public Builder mergeProductList(com.example.tutorial.RecommendProductProtocol.PublishProductList value) {
         if (productListBuilder_ == null) {
-          ensureProductListIsMutable();
-          productList_.add(index, builderForValue.build());
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              productList_ != com.example.tutorial.RecommendProductProtocol.PublishProductList.getDefaultInstance()) {
+            productList_ =
+              com.example.tutorial.RecommendProductProtocol.PublishProductList.newBuilder(productList_).mergeFrom(value).buildPartial();
+          } else {
+            productList_ = value;
+          }
           onChanged();
         } else {
-          productListBuilder_.addMessage(index, builderForValue.build());
+          productListBuilder_.mergeFrom(value);
         }
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public Builder addAllProductList(
-          java.lang.Iterable<? extends com.example.tutorial.RecommendProductProtocol.PublishProductList> values) {
-        if (productListBuilder_ == null) {
-          ensureProductListIsMutable();
-          super.addAll(values, productList_);
-          onChanged();
-        } else {
-          productListBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+       * <code>optional .tutorial.PublishProductList productList = 1;</code>
        */
       public Builder clearProductList() {
         if (productListBuilder_ == null) {
-          productList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          productList_ = com.example.tutorial.RecommendProductProtocol.PublishProductList.getDefaultInstance();
           onChanged();
         } else {
           productListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
       /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+       * <code>optional .tutorial.PublishProductList productList = 1;</code>
        */
-      public Builder removeProductList(int index) {
-        if (productListBuilder_ == null) {
-          ensureProductListIsMutable();
-          productList_.remove(index);
-          onChanged();
-        } else {
-          productListBuilder_.remove(index);
-        }
-        return this;
+      public com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder getProductListBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getProductListFieldBuilder().getBuilder();
       }
       /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+       * <code>optional .tutorial.PublishProductList productList = 1;</code>
        */
-      public com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder getProductListBuilder(
-          int index) {
-        return getProductListFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder getProductListOrBuilder(
-          int index) {
-        if (productListBuilder_ == null) {
-          return productList_.get(index);  } else {
-          return productListBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public java.util.List<? extends com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder> 
-           getProductListOrBuilderList() {
+      public com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder getProductListOrBuilder() {
         if (productListBuilder_ != null) {
-          return productListBuilder_.getMessageOrBuilderList();
+          return productListBuilder_.getMessageOrBuilder();
         } else {
-          return java.util.Collections.unmodifiableList(productList_);
+          return productList_;
         }
       }
       /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
+       * <code>optional .tutorial.PublishProductList productList = 1;</code>
        */
-      public com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder addProductListBuilder() {
-        return getProductListFieldBuilder().addBuilder(
-            com.example.tutorial.RecommendProductProtocol.PublishProductList.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder addProductListBuilder(
-          int index) {
-        return getProductListFieldBuilder().addBuilder(
-            index, com.example.tutorial.RecommendProductProtocol.PublishProductList.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .tutorial.PublishProductList productList = 1;</code>
-       */
-      public java.util.List<com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder> 
-           getProductListBuilderList() {
-        return getProductListFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilder<
           com.example.tutorial.RecommendProductProtocol.PublishProductList, com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder, com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder> 
           getProductListFieldBuilder() {
         if (productListBuilder_ == null) {
-          productListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          productListBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.example.tutorial.RecommendProductProtocol.PublishProductList, com.example.tutorial.RecommendProductProtocol.PublishProductList.Builder, com.example.tutorial.RecommendProductProtocol.PublishProductListOrBuilder>(
                   productList_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
           productList_ = null;
@@ -1007,239 +746,116 @@ public final class RecommendProductProtocol {
         return productListBuilder_;
       }
 
-      // repeated .tutorial.AdvertisementList adList = 2;
-      private java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> adList_ =
-        java.util.Collections.emptyList();
-      private void ensureAdListIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          adList_ = new java.util.ArrayList<com.example.tutorial.RecommendProductProtocol.AdvertisementList>(adList_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
+      // optional .tutorial.AdvertisementList adList = 2;
+      private com.example.tutorial.RecommendProductProtocol.AdvertisementList adList_ = com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
           com.example.tutorial.RecommendProductProtocol.AdvertisementList, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder, com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> adListBuilder_;
-
       /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+       * <code>optional .tutorial.AdvertisementList adList = 2;</code>
        */
-      public java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> getAdListList() {
+      public boolean hasAdList() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .tutorial.AdvertisementList adList = 2;</code>
+       */
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementList getAdList() {
         if (adListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(adList_);
+          return adList_;
         } else {
-          return adListBuilder_.getMessageList();
+          return adListBuilder_.getMessage();
         }
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+       * <code>optional .tutorial.AdvertisementList adList = 2;</code>
        */
-      public int getAdListCount() {
+      public Builder setAdList(com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
         if (adListBuilder_ == null) {
-          return adList_.size();
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          adList_ = value;
+          onChanged();
         } else {
-          return adListBuilder_.getCount();
+          adListBuilder_.setMessage(value);
         }
+        bitField0_ |= 0x00000002;
+        return this;
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList getAdList(int index) {
-        if (adListBuilder_ == null) {
-          return adList_.get(index);
-        } else {
-          return adListBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+       * <code>optional .tutorial.AdvertisementList adList = 2;</code>
        */
       public Builder setAdList(
-          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
-        if (adListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAdListIsMutable();
-          adList_.set(index, value);
-          onChanged();
-        } else {
-          adListBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public Builder setAdList(
-          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder builderForValue) {
-        if (adListBuilder_ == null) {
-          ensureAdListIsMutable();
-          adList_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          adListBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public Builder addAdList(com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
-        if (adListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAdListIsMutable();
-          adList_.add(value);
-          onChanged();
-        } else {
-          adListBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public Builder addAdList(
-          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
-        if (adListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAdListIsMutable();
-          adList_.add(index, value);
-          onChanged();
-        } else {
-          adListBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public Builder addAdList(
           com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder builderForValue) {
         if (adListBuilder_ == null) {
-          ensureAdListIsMutable();
-          adList_.add(builderForValue.build());
+          adList_ = builderForValue.build();
           onChanged();
         } else {
-          adListBuilder_.addMessage(builderForValue.build());
+          adListBuilder_.setMessage(builderForValue.build());
         }
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+       * <code>optional .tutorial.AdvertisementList adList = 2;</code>
        */
-      public Builder addAdList(
-          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder builderForValue) {
+      public Builder mergeAdList(com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
         if (adListBuilder_ == null) {
-          ensureAdListIsMutable();
-          adList_.add(index, builderForValue.build());
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              adList_ != com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance()) {
+            adList_ =
+              com.example.tutorial.RecommendProductProtocol.AdvertisementList.newBuilder(adList_).mergeFrom(value).buildPartial();
+          } else {
+            adList_ = value;
+          }
           onChanged();
         } else {
-          adListBuilder_.addMessage(index, builderForValue.build());
+          adListBuilder_.mergeFrom(value);
         }
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public Builder addAllAdList(
-          java.lang.Iterable<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementList> values) {
-        if (adListBuilder_ == null) {
-          ensureAdListIsMutable();
-          super.addAll(values, adList_);
-          onChanged();
-        } else {
-          adListBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+       * <code>optional .tutorial.AdvertisementList adList = 2;</code>
        */
       public Builder clearAdList() {
         if (adListBuilder_ == null) {
-          adList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          adList_ = com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
           onChanged();
         } else {
           adListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+       * <code>optional .tutorial.AdvertisementList adList = 2;</code>
        */
-      public Builder removeAdList(int index) {
-        if (adListBuilder_ == null) {
-          ensureAdListIsMutable();
-          adList_.remove(index);
-          onChanged();
-        } else {
-          adListBuilder_.remove(index);
-        }
-        return this;
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder getAdListBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAdListFieldBuilder().getBuilder();
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+       * <code>optional .tutorial.AdvertisementList adList = 2;</code>
        */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder getAdListBuilder(
-          int index) {
-        return getAdListFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getAdListOrBuilder(
-          int index) {
-        if (adListBuilder_ == null) {
-          return adList_.get(index);  } else {
-          return adListBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public java.util.List<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> 
-           getAdListOrBuilderList() {
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getAdListOrBuilder() {
         if (adListBuilder_ != null) {
-          return adListBuilder_.getMessageOrBuilderList();
+          return adListBuilder_.getMessageOrBuilder();
         } else {
-          return java.util.Collections.unmodifiableList(adList_);
+          return adList_;
         }
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
+       * <code>optional .tutorial.AdvertisementList adList = 2;</code>
        */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder addAdListBuilder() {
-        return getAdListFieldBuilder().addBuilder(
-            com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder addAdListBuilder(
-          int index) {
-        return getAdListFieldBuilder().addBuilder(
-            index, com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList adList = 2;</code>
-       */
-      public java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder> 
-           getAdListBuilderList() {
-        return getAdListFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilder<
           com.example.tutorial.RecommendProductProtocol.AdvertisementList, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder, com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> 
           getAdListFieldBuilder() {
         if (adListBuilder_ == null) {
-          adListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          adListBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.example.tutorial.RecommendProductProtocol.AdvertisementList, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder, com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder>(
                   adList_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
           adList_ = null;
@@ -1247,239 +863,116 @@ public final class RecommendProductProtocol {
         return adListBuilder_;
       }
 
-      // repeated .tutorial.AdvertisementList smallAdList = 3;
-      private java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> smallAdList_ =
-        java.util.Collections.emptyList();
-      private void ensureSmallAdListIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          smallAdList_ = new java.util.ArrayList<com.example.tutorial.RecommendProductProtocol.AdvertisementList>(smallAdList_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
+      // optional .tutorial.AdvertisementList smallAdList = 3;
+      private com.example.tutorial.RecommendProductProtocol.AdvertisementList smallAdList_ = com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
           com.example.tutorial.RecommendProductProtocol.AdvertisementList, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder, com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> smallAdListBuilder_;
-
       /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+       * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
        */
-      public java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList> getSmallAdListList() {
+      public boolean hasSmallAdList() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
+       */
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementList getSmallAdList() {
         if (smallAdListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(smallAdList_);
+          return smallAdList_;
         } else {
-          return smallAdListBuilder_.getMessageList();
+          return smallAdListBuilder_.getMessage();
         }
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+       * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
        */
-      public int getSmallAdListCount() {
+      public Builder setSmallAdList(com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
         if (smallAdListBuilder_ == null) {
-          return smallAdList_.size();
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          smallAdList_ = value;
+          onChanged();
         } else {
-          return smallAdListBuilder_.getCount();
+          smallAdListBuilder_.setMessage(value);
         }
+        bitField0_ |= 0x00000004;
+        return this;
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList getSmallAdList(int index) {
-        if (smallAdListBuilder_ == null) {
-          return smallAdList_.get(index);
-        } else {
-          return smallAdListBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+       * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
        */
       public Builder setSmallAdList(
-          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
-        if (smallAdListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSmallAdListIsMutable();
-          smallAdList_.set(index, value);
-          onChanged();
-        } else {
-          smallAdListBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public Builder setSmallAdList(
-          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder builderForValue) {
-        if (smallAdListBuilder_ == null) {
-          ensureSmallAdListIsMutable();
-          smallAdList_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          smallAdListBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public Builder addSmallAdList(com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
-        if (smallAdListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSmallAdListIsMutable();
-          smallAdList_.add(value);
-          onChanged();
-        } else {
-          smallAdListBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public Builder addSmallAdList(
-          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
-        if (smallAdListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSmallAdListIsMutable();
-          smallAdList_.add(index, value);
-          onChanged();
-        } else {
-          smallAdListBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public Builder addSmallAdList(
           com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder builderForValue) {
         if (smallAdListBuilder_ == null) {
-          ensureSmallAdListIsMutable();
-          smallAdList_.add(builderForValue.build());
+          smallAdList_ = builderForValue.build();
           onChanged();
         } else {
-          smallAdListBuilder_.addMessage(builderForValue.build());
+          smallAdListBuilder_.setMessage(builderForValue.build());
         }
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+       * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
        */
-      public Builder addSmallAdList(
-          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder builderForValue) {
+      public Builder mergeSmallAdList(com.example.tutorial.RecommendProductProtocol.AdvertisementList value) {
         if (smallAdListBuilder_ == null) {
-          ensureSmallAdListIsMutable();
-          smallAdList_.add(index, builderForValue.build());
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              smallAdList_ != com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance()) {
+            smallAdList_ =
+              com.example.tutorial.RecommendProductProtocol.AdvertisementList.newBuilder(smallAdList_).mergeFrom(value).buildPartial();
+          } else {
+            smallAdList_ = value;
+          }
           onChanged();
         } else {
-          smallAdListBuilder_.addMessage(index, builderForValue.build());
+          smallAdListBuilder_.mergeFrom(value);
         }
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public Builder addAllSmallAdList(
-          java.lang.Iterable<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementList> values) {
-        if (smallAdListBuilder_ == null) {
-          ensureSmallAdListIsMutable();
-          super.addAll(values, smallAdList_);
-          onChanged();
-        } else {
-          smallAdListBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+       * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
        */
       public Builder clearSmallAdList() {
         if (smallAdListBuilder_ == null) {
-          smallAdList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          smallAdList_ = com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
           onChanged();
         } else {
           smallAdListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+       * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
        */
-      public Builder removeSmallAdList(int index) {
-        if (smallAdListBuilder_ == null) {
-          ensureSmallAdListIsMutable();
-          smallAdList_.remove(index);
-          onChanged();
-        } else {
-          smallAdListBuilder_.remove(index);
-        }
-        return this;
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder getSmallAdListBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getSmallAdListFieldBuilder().getBuilder();
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+       * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
        */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder getSmallAdListBuilder(
-          int index) {
-        return getSmallAdListFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getSmallAdListOrBuilder(
-          int index) {
-        if (smallAdListBuilder_ == null) {
-          return smallAdList_.get(index);  } else {
-          return smallAdListBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public java.util.List<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> 
-           getSmallAdListOrBuilderList() {
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder getSmallAdListOrBuilder() {
         if (smallAdListBuilder_ != null) {
-          return smallAdListBuilder_.getMessageOrBuilderList();
+          return smallAdListBuilder_.getMessageOrBuilder();
         } else {
-          return java.util.Collections.unmodifiableList(smallAdList_);
+          return smallAdList_;
         }
       }
       /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
+       * <code>optional .tutorial.AdvertisementList smallAdList = 3;</code>
        */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder addSmallAdListBuilder() {
-        return getSmallAdListFieldBuilder().addBuilder(
-            com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder addSmallAdListBuilder(
-          int index) {
-        return getSmallAdListFieldBuilder().addBuilder(
-            index, com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .tutorial.AdvertisementList smallAdList = 3;</code>
-       */
-      public java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder> 
-           getSmallAdListBuilderList() {
-        return getSmallAdListFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilder<
           com.example.tutorial.RecommendProductProtocol.AdvertisementList, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder, com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder> 
           getSmallAdListFieldBuilder() {
         if (smallAdListBuilder_ == null) {
-          smallAdListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          smallAdListBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.example.tutorial.RecommendProductProtocol.AdvertisementList, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder, com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder>(
                   smallAdList_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           smallAdList_ = null;
@@ -14995,10 +14488,10 @@ public final class RecommendProductProtocol {
   static {
     java.lang.String[] descriptorData = {
       "\n\036recommendproductprotocol.proto\022\010tutori" +
-      "al\"\264\001\n\rHomeRecommend\0221\n\013productList\030\001 \003(" +
+      "al\"\264\001\n\rHomeRecommend\0221\n\013productList\030\001 \001(" +
       "\0132\034.tutorial.PublishProductList\022+\n\006adLis" +
-      "t\030\002 \003(\0132\033.tutorial.AdvertisementList\0220\n\013" +
-      "smallAdList\030\003 \003(\0132\033.tutorial.Advertiseme" +
+      "t\030\002 \001(\0132\033.tutorial.AdvertisementList\0220\n\013" +
+      "smallAdList\030\003 \001(\0132\033.tutorial.Advertiseme" +
       "ntList\022\021\n\textension\030\004 \003(\t\"\235\002\n\022PublishPro" +
       "ductList\022\r\n\005total\030\001 \001(\005\022\r\n\005start\030\002 \001(\005\022\013" +
       "\n\003end\030\003 \001(\005\0224\n\016publishProduct\030\004 \003(\0132\034.tu" +

@@ -4,9 +4,9 @@ option java_package = "com.example.tutorial";
 option java_outer_classname = "RecommendProductProtocol";
 
 message HomeRecommend {
-	repeated PublishProductList productList=1;
-	repeated AdvertisementList adList=2;
-	repeated AdvertisementList smallAdList=3;
+	optional PublishProductList productList=1;
+	optional AdvertisementList adList=2;
+	optional AdvertisementList smallAdList=3;
 	repeated string extension=4;
 }
 
