@@ -1,0 +1,28 @@
+package tutorial;
+
+option java_package = "com.example.tutorial";
+option java_outer_classname = "ListCategoryProductProtocol";
+
+message ListCategoryProductItem {
+	optional int32 userId=1;
+	optional int32 os=2;
+	optional int32 size=3;
+	optional int32 start=4;
+	optional string mobile=5;
+	optional int32 orderBy=6;
+	optional int32 categoryId=7;
+	optional int32 themeVersion=8;
+	optional int32 platform=9;
+	optional int32 compress=10;
+	optional int32 resType=11;
+	optional int64 relateId=12;
+	optional string keyword=13;
+	optional string screen=14;
+	optional int32 source=15;
+	optional string userToken=16;
+	optional int32 randomCount=17;
+	optional string imei=18;
+	optional int32 searchType=19;
+	optional string imsi=20;
+	optional string net=21;
+}

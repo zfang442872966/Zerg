@@ -27,7 +27,7 @@ public class OppoHttpURLConnection {
 		byte[] result;
 		Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.4.69", 8888));
 
-		HttpURLConnection connection = (HttpURLConnection) new URL("http://i3.store.nearme.com.cn/client/get_hot_app.pb").openConnection(proxy);
+		HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection(proxy);
 		connection.setDoOutput(true);
 		connection.setReadTimeout(30000);
 		connection.setConnectTimeout(30000);
@@ -68,10 +68,6 @@ public class OppoHttpURLConnection {
 		return result;
 	}
 
-	static int makeTag(int i, int j) {
-		return j | i << 3;
-	}
-
 	public static void main(String[] args) throws IOException {
 		// 应用排行
 		// [8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 16, 15, 24, 20, 32, 0, 42,
@@ -104,29 +100,31 @@ public class OppoHttpURLConnection {
 		// [8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 16, 15, 24, 20, 32, -76,
 		// 1, 42, 8, 90, 84, 69, 32, 85, 57, 51, 48, 64, 3, 80, 1, 120, 1]
 
-//		byte[] abyte0 = { 8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 16, 15, 24, 20, 32, 0, 42, 8, 90, 84, 69, 32, 85, 57, 51, 48, 56, 7, 80, 1, 120, 1 };
-//		System.out.println(new String(abyte0));
-		System.out.println("------------------------------------------------------------------------------");
+		// byte[] abyte0 = { 8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 16, 15,
+		// 24, 20, 32, 0, 42, 8, 90, 84, 69, 32, 85, 57, 51, 48, 56, 7, 80, 1,
+		// 120, 1 };
+		// System.out.println(new String(abyte0));
 
+		// 应用排行榜
+		System.out.println("-------------------------------应用排行榜request-----------------------------------------------");
 		ListCategoryProductProtocol.ListCategoryProductItem.Builder builder = ListCategoryProductProtocol.ListCategoryProductItem.newBuilder();
 		builder.setUserId(-1);
 		builder.setOs(15);
 		builder.setSize(20);
-		builder.setStart(20);
+		builder.setStart(0);
 		builder.setMobile("ZTE U930");
 		builder.setCategoryId(7);
 		builder.setCompress(1);
 		builder.setSource(1);
 		System.out.println(new String(builder.build().toByteArray()));
-		//反序列化request
+		// 应用排行榜反序列化request
 		ListCategoryProductProtocol.ListCategoryProductItem localpCategoryProductItem = ListCategoryProductProtocol.ListCategoryProductItem.parseFrom(builder.build().toByteArray());
 		System.out.println(localpCategoryProductItem.toString());
-		System.out.println("------------------------------------------------------------------------------");
 
+		System.out.println("------------------------------应用排行榜response------------------------------------------------");
 		byte[] result = httpURLConnection("http://i3.store.nearme.com.cn/client/get_hot_app.pb", builder.build().toByteArray());
 		System.out.println(new String(CompressGzip.decompressGzip(result)));
 		PublishProductProtocol.PublishProductList localPublishProductList = PublishProductProtocol.PublishProductList.parseFrom(CompressGzip.decompressGzip(result));
-		// System.out.println(localPublishProductList.toString());
 		System.out.println("------------------------------------------------------------------------------");
 		if (localPublishProductList.getPublishProductList().size() > 0) {
 			for (int i = 0; i < localPublishProductList.getPublishProductList().size(); i++) {
