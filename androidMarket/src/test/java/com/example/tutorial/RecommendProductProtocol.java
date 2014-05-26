@@ -3233,905 +3233,6 @@ public final class RecommendProductProtocol {
     // @@protoc_insertion_point(class_scope:tutorial.PublishProductList)
   }
 
-  public interface AdvertisementListOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // optional int32 total = 1;
-    /**
-     * <code>optional int32 total = 1;</code>
-     */
-    boolean hasTotal();
-    /**
-     * <code>optional int32 total = 1;</code>
-     */
-    int getTotal();
-
-    // optional int32 start = 2;
-    /**
-     * <code>optional int32 start = 2;</code>
-     */
-    boolean hasStart();
-    /**
-     * <code>optional int32 start = 2;</code>
-     */
-    int getStart();
-
-    // optional int32 end = 3;
-    /**
-     * <code>optional int32 end = 3;</code>
-     */
-    boolean hasEnd();
-    /**
-     * <code>optional int32 end = 3;</code>
-     */
-    int getEnd();
-
-    // repeated string advertisement = 4;
-    /**
-     * <code>repeated string advertisement = 4;</code>
-     */
-    java.util.List<java.lang.String>
-    getAdvertisementList();
-    /**
-     * <code>repeated string advertisement = 4;</code>
-     */
-    int getAdvertisementCount();
-    /**
-     * <code>repeated string advertisement = 4;</code>
-     */
-    java.lang.String getAdvertisement(int index);
-    /**
-     * <code>repeated string advertisement = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getAdvertisementBytes(int index);
-
-    // optional string fsUrl = 5;
-    /**
-     * <code>optional string fsUrl = 5;</code>
-     */
-    boolean hasFsUrl();
-    /**
-     * <code>optional string fsUrl = 5;</code>
-     */
-    java.lang.String getFsUrl();
-    /**
-     * <code>optional string fsUrl = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getFsUrlBytes();
-  }
-  /**
-   * Protobuf type {@code tutorial.AdvertisementList}
-   */
-  public static final class AdvertisementList extends
-      com.google.protobuf.GeneratedMessage
-      implements AdvertisementListOrBuilder {
-    // Use AdvertisementList.newBuilder() to construct.
-    private AdvertisementList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private AdvertisementList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final AdvertisementList defaultInstance;
-    public static AdvertisementList getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public AdvertisementList getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AdvertisementList(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              total_ = input.readInt32();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              start_ = input.readInt32();
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              end_ = input.readInt32();
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                advertisement_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              advertisement_.add(input.readBytes());
-              break;
-            }
-            case 42: {
-              bitField0_ |= 0x00000008;
-              fsUrl_ = input.readBytes();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          advertisement_ = new com.google.protobuf.UnmodifiableLazyStringList(advertisement_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.example.tutorial.RecommendProductProtocol.AdvertisementList.class, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<AdvertisementList> PARSER =
-        new com.google.protobuf.AbstractParser<AdvertisementList>() {
-      public AdvertisementList parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AdvertisementList(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AdvertisementList> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // optional int32 total = 1;
-    public static final int TOTAL_FIELD_NUMBER = 1;
-    private int total_;
-    /**
-     * <code>optional int32 total = 1;</code>
-     */
-    public boolean hasTotal() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional int32 total = 1;</code>
-     */
-    public int getTotal() {
-      return total_;
-    }
-
-    // optional int32 start = 2;
-    public static final int START_FIELD_NUMBER = 2;
-    private int start_;
-    /**
-     * <code>optional int32 start = 2;</code>
-     */
-    public boolean hasStart() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional int32 start = 2;</code>
-     */
-    public int getStart() {
-      return start_;
-    }
-
-    // optional int32 end = 3;
-    public static final int END_FIELD_NUMBER = 3;
-    private int end_;
-    /**
-     * <code>optional int32 end = 3;</code>
-     */
-    public boolean hasEnd() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional int32 end = 3;</code>
-     */
-    public int getEnd() {
-      return end_;
-    }
-
-    // repeated string advertisement = 4;
-    public static final int ADVERTISEMENT_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList advertisement_;
-    /**
-     * <code>repeated string advertisement = 4;</code>
-     */
-    public java.util.List<java.lang.String>
-        getAdvertisementList() {
-      return advertisement_;
-    }
-    /**
-     * <code>repeated string advertisement = 4;</code>
-     */
-    public int getAdvertisementCount() {
-      return advertisement_.size();
-    }
-    /**
-     * <code>repeated string advertisement = 4;</code>
-     */
-    public java.lang.String getAdvertisement(int index) {
-      return advertisement_.get(index);
-    }
-    /**
-     * <code>repeated string advertisement = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getAdvertisementBytes(int index) {
-      return advertisement_.getByteString(index);
-    }
-
-    // optional string fsUrl = 5;
-    public static final int FSURL_FIELD_NUMBER = 5;
-    private java.lang.Object fsUrl_;
-    /**
-     * <code>optional string fsUrl = 5;</code>
-     */
-    public boolean hasFsUrl() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional string fsUrl = 5;</code>
-     */
-    public java.lang.String getFsUrl() {
-      java.lang.Object ref = fsUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          fsUrl_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string fsUrl = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getFsUrlBytes() {
-      java.lang.Object ref = fsUrl_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fsUrl_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private void initFields() {
-      total_ = 0;
-      start_ = 0;
-      end_ = 0;
-      advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      fsUrl_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, total_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, start_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(3, end_);
-      }
-      for (int i = 0; i < advertisement_.size(); i++) {
-        output.writeBytes(4, advertisement_.getByteString(i));
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(5, getFsUrlBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, total_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, start_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, end_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < advertisement_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(advertisement_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getAdvertisementList().size();
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getFsUrlBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.example.tutorial.RecommendProductProtocol.AdvertisementList prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code tutorial.AdvertisementList}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.example.tutorial.RecommendProductProtocol.AdvertisementList.class, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder.class);
-      }
-
-      // Construct using com.example.tutorial.RecommendProductProtocol.AdvertisementList.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        total_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        start_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        end_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        fsUrl_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_descriptor;
-      }
-
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList getDefaultInstanceForType() {
-        return com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
-      }
-
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList build() {
-        com.example.tutorial.RecommendProductProtocol.AdvertisementList result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.example.tutorial.RecommendProductProtocol.AdvertisementList buildPartial() {
-        com.example.tutorial.RecommendProductProtocol.AdvertisementList result = new com.example.tutorial.RecommendProductProtocol.AdvertisementList(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.total_ = total_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.start_ = start_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.end_ = end_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          advertisement_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              advertisement_);
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.advertisement_ = advertisement_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.fsUrl_ = fsUrl_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.tutorial.RecommendProductProtocol.AdvertisementList) {
-          return mergeFrom((com.example.tutorial.RecommendProductProtocol.AdvertisementList)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.example.tutorial.RecommendProductProtocol.AdvertisementList other) {
-        if (other == com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance()) return this;
-        if (other.hasTotal()) {
-          setTotal(other.getTotal());
-        }
-        if (other.hasStart()) {
-          setStart(other.getStart());
-        }
-        if (other.hasEnd()) {
-          setEnd(other.getEnd());
-        }
-        if (!other.advertisement_.isEmpty()) {
-          if (advertisement_.isEmpty()) {
-            advertisement_ = other.advertisement_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureAdvertisementIsMutable();
-            advertisement_.addAll(other.advertisement_);
-          }
-          onChanged();
-        }
-        if (other.hasFsUrl()) {
-          bitField0_ |= 0x00000010;
-          fsUrl_ = other.fsUrl_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.example.tutorial.RecommendProductProtocol.AdvertisementList parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.tutorial.RecommendProductProtocol.AdvertisementList) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // optional int32 total = 1;
-      private int total_ ;
-      /**
-       * <code>optional int32 total = 1;</code>
-       */
-      public boolean hasTotal() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional int32 total = 1;</code>
-       */
-      public int getTotal() {
-        return total_;
-      }
-      /**
-       * <code>optional int32 total = 1;</code>
-       */
-      public Builder setTotal(int value) {
-        bitField0_ |= 0x00000001;
-        total_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 total = 1;</code>
-       */
-      public Builder clearTotal() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        total_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // optional int32 start = 2;
-      private int start_ ;
-      /**
-       * <code>optional int32 start = 2;</code>
-       */
-      public boolean hasStart() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional int32 start = 2;</code>
-       */
-      public int getStart() {
-        return start_;
-      }
-      /**
-       * <code>optional int32 start = 2;</code>
-       */
-      public Builder setStart(int value) {
-        bitField0_ |= 0x00000002;
-        start_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 start = 2;</code>
-       */
-      public Builder clearStart() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        start_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // optional int32 end = 3;
-      private int end_ ;
-      /**
-       * <code>optional int32 end = 3;</code>
-       */
-      public boolean hasEnd() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional int32 end = 3;</code>
-       */
-      public int getEnd() {
-        return end_;
-      }
-      /**
-       * <code>optional int32 end = 3;</code>
-       */
-      public Builder setEnd(int value) {
-        bitField0_ |= 0x00000004;
-        end_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 end = 3;</code>
-       */
-      public Builder clearEnd() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        end_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // repeated string advertisement = 4;
-      private com.google.protobuf.LazyStringList advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureAdvertisementIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          advertisement_ = new com.google.protobuf.LazyStringArrayList(advertisement_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public java.util.List<java.lang.String>
-          getAdvertisementList() {
-        return java.util.Collections.unmodifiableList(advertisement_);
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public int getAdvertisementCount() {
-        return advertisement_.size();
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public java.lang.String getAdvertisement(int index) {
-        return advertisement_.get(index);
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAdvertisementBytes(int index) {
-        return advertisement_.getByteString(index);
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public Builder setAdvertisement(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAdvertisementIsMutable();
-        advertisement_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public Builder addAdvertisement(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAdvertisementIsMutable();
-        advertisement_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public Builder addAllAdvertisement(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureAdvertisementIsMutable();
-        super.addAll(values, advertisement_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public Builder clearAdvertisement() {
-        advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public Builder addAdvertisementBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAdvertisementIsMutable();
-        advertisement_.add(value);
-        onChanged();
-        return this;
-      }
-
-      // optional string fsUrl = 5;
-      private java.lang.Object fsUrl_ = "";
-      /**
-       * <code>optional string fsUrl = 5;</code>
-       */
-      public boolean hasFsUrl() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional string fsUrl = 5;</code>
-       */
-      public java.lang.String getFsUrl() {
-        java.lang.Object ref = fsUrl_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          fsUrl_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string fsUrl = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getFsUrlBytes() {
-        java.lang.Object ref = fsUrl_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fsUrl_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string fsUrl = 5;</code>
-       */
-      public Builder setFsUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        fsUrl_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string fsUrl = 5;</code>
-       */
-      public Builder clearFsUrl() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        fsUrl_ = getDefaultInstance().getFsUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string fsUrl = 5;</code>
-       */
-      public Builder setFsUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        fsUrl_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:tutorial.AdvertisementList)
-    }
-
-    static {
-      defaultInstance = new AdvertisementList(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:tutorial.AdvertisementList)
-  }
-
   public interface PublishProductItemOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
@@ -14458,6 +13559,2168 @@ public final class RecommendProductProtocol {
     // @@protoc_insertion_point(class_scope:tutorial.PublishProductItem)
   }
 
+  public interface AdvertisementListOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional int32 total = 1;
+    /**
+     * <code>optional int32 total = 1;</code>
+     */
+    boolean hasTotal();
+    /**
+     * <code>optional int32 total = 1;</code>
+     */
+    int getTotal();
+
+    // optional int32 start = 2;
+    /**
+     * <code>optional int32 start = 2;</code>
+     */
+    boolean hasStart();
+    /**
+     * <code>optional int32 start = 2;</code>
+     */
+    int getStart();
+
+    // optional int32 end = 3;
+    /**
+     * <code>optional int32 end = 3;</code>
+     */
+    boolean hasEnd();
+    /**
+     * <code>optional int32 end = 3;</code>
+     */
+    int getEnd();
+
+    // repeated string advertisement = 4;
+    /**
+     * <code>repeated string advertisement = 4;</code>
+     */
+    java.util.List<java.lang.String>
+    getAdvertisementList();
+    /**
+     * <code>repeated string advertisement = 4;</code>
+     */
+    int getAdvertisementCount();
+    /**
+     * <code>repeated string advertisement = 4;</code>
+     */
+    java.lang.String getAdvertisement(int index);
+    /**
+     * <code>repeated string advertisement = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getAdvertisementBytes(int index);
+
+    // optional string fsUrl = 5;
+    /**
+     * <code>optional string fsUrl = 5;</code>
+     */
+    boolean hasFsUrl();
+    /**
+     * <code>optional string fsUrl = 5;</code>
+     */
+    java.lang.String getFsUrl();
+    /**
+     * <code>optional string fsUrl = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getFsUrlBytes();
+  }
+  /**
+   * Protobuf type {@code tutorial.AdvertisementList}
+   */
+  public static final class AdvertisementList extends
+      com.google.protobuf.GeneratedMessage
+      implements AdvertisementListOrBuilder {
+    // Use AdvertisementList.newBuilder() to construct.
+    private AdvertisementList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private AdvertisementList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final AdvertisementList defaultInstance;
+    public static AdvertisementList getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public AdvertisementList getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AdvertisementList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              total_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              start_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              end_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                advertisement_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              advertisement_.add(input.readBytes());
+              break;
+            }
+            case 42: {
+              bitField0_ |= 0x00000008;
+              fsUrl_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          advertisement_ = new com.google.protobuf.UnmodifiableLazyStringList(advertisement_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.example.tutorial.RecommendProductProtocol.AdvertisementList.class, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<AdvertisementList> PARSER =
+        new com.google.protobuf.AbstractParser<AdvertisementList>() {
+      public AdvertisementList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AdvertisementList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AdvertisementList> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional int32 total = 1;
+    public static final int TOTAL_FIELD_NUMBER = 1;
+    private int total_;
+    /**
+     * <code>optional int32 total = 1;</code>
+     */
+    public boolean hasTotal() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 total = 1;</code>
+     */
+    public int getTotal() {
+      return total_;
+    }
+
+    // optional int32 start = 2;
+    public static final int START_FIELD_NUMBER = 2;
+    private int start_;
+    /**
+     * <code>optional int32 start = 2;</code>
+     */
+    public boolean hasStart() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 start = 2;</code>
+     */
+    public int getStart() {
+      return start_;
+    }
+
+    // optional int32 end = 3;
+    public static final int END_FIELD_NUMBER = 3;
+    private int end_;
+    /**
+     * <code>optional int32 end = 3;</code>
+     */
+    public boolean hasEnd() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 end = 3;</code>
+     */
+    public int getEnd() {
+      return end_;
+    }
+
+    // repeated string advertisement = 4;
+    public static final int ADVERTISEMENT_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList advertisement_;
+    /**
+     * <code>repeated string advertisement = 4;</code>
+     */
+    public java.util.List<java.lang.String>
+        getAdvertisementList() {
+      return advertisement_;
+    }
+    /**
+     * <code>repeated string advertisement = 4;</code>
+     */
+    public int getAdvertisementCount() {
+      return advertisement_.size();
+    }
+    /**
+     * <code>repeated string advertisement = 4;</code>
+     */
+    public java.lang.String getAdvertisement(int index) {
+      return advertisement_.get(index);
+    }
+    /**
+     * <code>repeated string advertisement = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAdvertisementBytes(int index) {
+      return advertisement_.getByteString(index);
+    }
+
+    // optional string fsUrl = 5;
+    public static final int FSURL_FIELD_NUMBER = 5;
+    private java.lang.Object fsUrl_;
+    /**
+     * <code>optional string fsUrl = 5;</code>
+     */
+    public boolean hasFsUrl() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string fsUrl = 5;</code>
+     */
+    public java.lang.String getFsUrl() {
+      java.lang.Object ref = fsUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          fsUrl_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string fsUrl = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFsUrlBytes() {
+      java.lang.Object ref = fsUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fsUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      total_ = 0;
+      start_ = 0;
+      end_ = 0;
+      advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      fsUrl_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, total_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, start_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, end_);
+      }
+      for (int i = 0; i < advertisement_.size(); i++) {
+        output.writeBytes(4, advertisement_.getByteString(i));
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(5, getFsUrlBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, total_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, start_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, end_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < advertisement_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(advertisement_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getAdvertisementList().size();
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getFsUrlBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.example.tutorial.RecommendProductProtocol.AdvertisementList prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code tutorial.AdvertisementList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.example.tutorial.RecommendProductProtocol.AdvertisementListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.example.tutorial.RecommendProductProtocol.AdvertisementList.class, com.example.tutorial.RecommendProductProtocol.AdvertisementList.Builder.class);
+      }
+
+      // Construct using com.example.tutorial.RecommendProductProtocol.AdvertisementList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        total_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        start_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        end_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        fsUrl_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementList_descriptor;
+      }
+
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementList getDefaultInstanceForType() {
+        return com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance();
+      }
+
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementList build() {
+        com.example.tutorial.RecommendProductProtocol.AdvertisementList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementList buildPartial() {
+        com.example.tutorial.RecommendProductProtocol.AdvertisementList result = new com.example.tutorial.RecommendProductProtocol.AdvertisementList(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.total_ = total_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.start_ = start_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.end_ = end_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          advertisement_ = new com.google.protobuf.UnmodifiableLazyStringList(
+              advertisement_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.advertisement_ = advertisement_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.fsUrl_ = fsUrl_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.example.tutorial.RecommendProductProtocol.AdvertisementList) {
+          return mergeFrom((com.example.tutorial.RecommendProductProtocol.AdvertisementList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.example.tutorial.RecommendProductProtocol.AdvertisementList other) {
+        if (other == com.example.tutorial.RecommendProductProtocol.AdvertisementList.getDefaultInstance()) return this;
+        if (other.hasTotal()) {
+          setTotal(other.getTotal());
+        }
+        if (other.hasStart()) {
+          setStart(other.getStart());
+        }
+        if (other.hasEnd()) {
+          setEnd(other.getEnd());
+        }
+        if (!other.advertisement_.isEmpty()) {
+          if (advertisement_.isEmpty()) {
+            advertisement_ = other.advertisement_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureAdvertisementIsMutable();
+            advertisement_.addAll(other.advertisement_);
+          }
+          onChanged();
+        }
+        if (other.hasFsUrl()) {
+          bitField0_ |= 0x00000010;
+          fsUrl_ = other.fsUrl_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.example.tutorial.RecommendProductProtocol.AdvertisementList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.example.tutorial.RecommendProductProtocol.AdvertisementList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional int32 total = 1;
+      private int total_ ;
+      /**
+       * <code>optional int32 total = 1;</code>
+       */
+      public boolean hasTotal() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 total = 1;</code>
+       */
+      public int getTotal() {
+        return total_;
+      }
+      /**
+       * <code>optional int32 total = 1;</code>
+       */
+      public Builder setTotal(int value) {
+        bitField0_ |= 0x00000001;
+        total_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 total = 1;</code>
+       */
+      public Builder clearTotal() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        total_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 start = 2;
+      private int start_ ;
+      /**
+       * <code>optional int32 start = 2;</code>
+       */
+      public boolean hasStart() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 start = 2;</code>
+       */
+      public int getStart() {
+        return start_;
+      }
+      /**
+       * <code>optional int32 start = 2;</code>
+       */
+      public Builder setStart(int value) {
+        bitField0_ |= 0x00000002;
+        start_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 start = 2;</code>
+       */
+      public Builder clearStart() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        start_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 end = 3;
+      private int end_ ;
+      /**
+       * <code>optional int32 end = 3;</code>
+       */
+      public boolean hasEnd() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 end = 3;</code>
+       */
+      public int getEnd() {
+        return end_;
+      }
+      /**
+       * <code>optional int32 end = 3;</code>
+       */
+      public Builder setEnd(int value) {
+        bitField0_ |= 0x00000004;
+        end_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 end = 3;</code>
+       */
+      public Builder clearEnd() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        end_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // repeated string advertisement = 4;
+      private com.google.protobuf.LazyStringList advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureAdvertisementIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          advertisement_ = new com.google.protobuf.LazyStringArrayList(advertisement_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated string advertisement = 4;</code>
+       */
+      public java.util.List<java.lang.String>
+          getAdvertisementList() {
+        return java.util.Collections.unmodifiableList(advertisement_);
+      }
+      /**
+       * <code>repeated string advertisement = 4;</code>
+       */
+      public int getAdvertisementCount() {
+        return advertisement_.size();
+      }
+      /**
+       * <code>repeated string advertisement = 4;</code>
+       */
+      public java.lang.String getAdvertisement(int index) {
+        return advertisement_.get(index);
+      }
+      /**
+       * <code>repeated string advertisement = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAdvertisementBytes(int index) {
+        return advertisement_.getByteString(index);
+      }
+      /**
+       * <code>repeated string advertisement = 4;</code>
+       */
+      public Builder setAdvertisement(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAdvertisementIsMutable();
+        advertisement_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string advertisement = 4;</code>
+       */
+      public Builder addAdvertisement(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAdvertisementIsMutable();
+        advertisement_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string advertisement = 4;</code>
+       */
+      public Builder addAllAdvertisement(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAdvertisementIsMutable();
+        super.addAll(values, advertisement_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string advertisement = 4;</code>
+       */
+      public Builder clearAdvertisement() {
+        advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string advertisement = 4;</code>
+       */
+      public Builder addAdvertisementBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAdvertisementIsMutable();
+        advertisement_.add(value);
+        onChanged();
+        return this;
+      }
+
+      // optional string fsUrl = 5;
+      private java.lang.Object fsUrl_ = "";
+      /**
+       * <code>optional string fsUrl = 5;</code>
+       */
+      public boolean hasFsUrl() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string fsUrl = 5;</code>
+       */
+      public java.lang.String getFsUrl() {
+        java.lang.Object ref = fsUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          fsUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string fsUrl = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFsUrlBytes() {
+        java.lang.Object ref = fsUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fsUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string fsUrl = 5;</code>
+       */
+      public Builder setFsUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        fsUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string fsUrl = 5;</code>
+       */
+      public Builder clearFsUrl() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        fsUrl_ = getDefaultInstance().getFsUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string fsUrl = 5;</code>
+       */
+      public Builder setFsUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        fsUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:tutorial.AdvertisementList)
+    }
+
+    static {
+      defaultInstance = new AdvertisementList(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:tutorial.AdvertisementList)
+  }
+
+  public interface AdvertisementItemOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional int32 type = 1;
+    /**
+     * <code>optional int32 type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>optional int32 type = 1;</code>
+     */
+    int getType();
+
+    // optional string name = 2;
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    // optional string iconUrl = 3;
+    /**
+     * <code>optional string iconUrl = 3;</code>
+     */
+    boolean hasIconUrl();
+    /**
+     * <code>optional string iconUrl = 3;</code>
+     */
+    java.lang.String getIconUrl();
+    /**
+     * <code>optional string iconUrl = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getIconUrlBytes();
+
+    // optional string extension = 4;
+    /**
+     * <code>optional string extension = 4;</code>
+     */
+    boolean hasExtension();
+    /**
+     * <code>optional string extension = 4;</code>
+     */
+    java.lang.String getExtension();
+    /**
+     * <code>optional string extension = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getExtensionBytes();
+
+    // optional int32 resType = 5;
+    /**
+     * <code>optional int32 resType = 5;</code>
+     */
+    boolean hasResType();
+    /**
+     * <code>optional int32 resType = 5;</code>
+     */
+    int getResType();
+
+    // optional int32 id = 6;
+    /**
+     * <code>optional int32 id = 6;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional int32 id = 6;</code>
+     */
+    int getId();
+
+    // optional string picUrl = 7;
+    /**
+     * <code>optional string picUrl = 7;</code>
+     */
+    boolean hasPicUrl();
+    /**
+     * <code>optional string picUrl = 7;</code>
+     */
+    java.lang.String getPicUrl();
+    /**
+     * <code>optional string picUrl = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getPicUrlBytes();
+
+    // optional int32 musicPicSwitch = 8;
+    /**
+     * <code>optional int32 musicPicSwitch = 8;</code>
+     */
+    boolean hasMusicPicSwitch();
+    /**
+     * <code>optional int32 musicPicSwitch = 8;</code>
+     */
+    int getMusicPicSwitch();
+  }
+  /**
+   * Protobuf type {@code tutorial.AdvertisementItem}
+   */
+  public static final class AdvertisementItem extends
+      com.google.protobuf.GeneratedMessage
+      implements AdvertisementItemOrBuilder {
+    // Use AdvertisementItem.newBuilder() to construct.
+    private AdvertisementItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private AdvertisementItem(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final AdvertisementItem defaultInstance;
+    public static AdvertisementItem getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public AdvertisementItem getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AdvertisementItem(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              type_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              name_ = input.readBytes();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              iconUrl_ = input.readBytes();
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000008;
+              extension_ = input.readBytes();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              resType_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              id_ = input.readInt32();
+              break;
+            }
+            case 58: {
+              bitField0_ |= 0x00000040;
+              picUrl_ = input.readBytes();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              musicPicSwitch_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementItem_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementItem_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.example.tutorial.RecommendProductProtocol.AdvertisementItem.class, com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<AdvertisementItem> PARSER =
+        new com.google.protobuf.AbstractParser<AdvertisementItem>() {
+      public AdvertisementItem parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AdvertisementItem(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AdvertisementItem> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional int32 type = 1;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>optional int32 type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 type = 1;</code>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    // optional string name = 2;
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.Object name_;
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string iconUrl = 3;
+    public static final int ICONURL_FIELD_NUMBER = 3;
+    private java.lang.Object iconUrl_;
+    /**
+     * <code>optional string iconUrl = 3;</code>
+     */
+    public boolean hasIconUrl() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string iconUrl = 3;</code>
+     */
+    public java.lang.String getIconUrl() {
+      java.lang.Object ref = iconUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          iconUrl_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string iconUrl = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIconUrlBytes() {
+      java.lang.Object ref = iconUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iconUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string extension = 4;
+    public static final int EXTENSION_FIELD_NUMBER = 4;
+    private java.lang.Object extension_;
+    /**
+     * <code>optional string extension = 4;</code>
+     */
+    public boolean hasExtension() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string extension = 4;</code>
+     */
+    public java.lang.String getExtension() {
+      java.lang.Object ref = extension_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          extension_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string extension = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getExtensionBytes() {
+      java.lang.Object ref = extension_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        extension_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional int32 resType = 5;
+    public static final int RESTYPE_FIELD_NUMBER = 5;
+    private int resType_;
+    /**
+     * <code>optional int32 resType = 5;</code>
+     */
+    public boolean hasResType() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 resType = 5;</code>
+     */
+    public int getResType() {
+      return resType_;
+    }
+
+    // optional int32 id = 6;
+    public static final int ID_FIELD_NUMBER = 6;
+    private int id_;
+    /**
+     * <code>optional int32 id = 6;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int32 id = 6;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    // optional string picUrl = 7;
+    public static final int PICURL_FIELD_NUMBER = 7;
+    private java.lang.Object picUrl_;
+    /**
+     * <code>optional string picUrl = 7;</code>
+     */
+    public boolean hasPicUrl() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string picUrl = 7;</code>
+     */
+    public java.lang.String getPicUrl() {
+      java.lang.Object ref = picUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          picUrl_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string picUrl = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPicUrlBytes() {
+      java.lang.Object ref = picUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        picUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional int32 musicPicSwitch = 8;
+    public static final int MUSICPICSWITCH_FIELD_NUMBER = 8;
+    private int musicPicSwitch_;
+    /**
+     * <code>optional int32 musicPicSwitch = 8;</code>
+     */
+    public boolean hasMusicPicSwitch() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional int32 musicPicSwitch = 8;</code>
+     */
+    public int getMusicPicSwitch() {
+      return musicPicSwitch_;
+    }
+
+    private void initFields() {
+      type_ = 0;
+      name_ = "";
+      iconUrl_ = "";
+      extension_ = "";
+      resType_ = 0;
+      id_ = 0;
+      picUrl_ = "";
+      musicPicSwitch_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getIconUrlBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getExtensionBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, resType_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(6, id_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getPicUrlBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, musicPicSwitch_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getIconUrlBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getExtensionBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, resType_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, id_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getPicUrlBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, musicPicSwitch_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.example.tutorial.RecommendProductProtocol.AdvertisementItem parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.example.tutorial.RecommendProductProtocol.AdvertisementItem prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code tutorial.AdvertisementItem}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementItem_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.example.tutorial.RecommendProductProtocol.AdvertisementItem.class, com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder.class);
+      }
+
+      // Construct using com.example.tutorial.RecommendProductProtocol.AdvertisementItem.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        iconUrl_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extension_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        resType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        picUrl_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        musicPicSwitch_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.example.tutorial.RecommendProductProtocol.internal_static_tutorial_AdvertisementItem_descriptor;
+      }
+
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementItem getDefaultInstanceForType() {
+        return com.example.tutorial.RecommendProductProtocol.AdvertisementItem.getDefaultInstance();
+      }
+
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementItem build() {
+        com.example.tutorial.RecommendProductProtocol.AdvertisementItem result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementItem buildPartial() {
+        com.example.tutorial.RecommendProductProtocol.AdvertisementItem result = new com.example.tutorial.RecommendProductProtocol.AdvertisementItem(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.iconUrl_ = iconUrl_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.extension_ = extension_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.resType_ = resType_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.picUrl_ = picUrl_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.musicPicSwitch_ = musicPicSwitch_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.example.tutorial.RecommendProductProtocol.AdvertisementItem) {
+          return mergeFrom((com.example.tutorial.RecommendProductProtocol.AdvertisementItem)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.example.tutorial.RecommendProductProtocol.AdvertisementItem other) {
+        if (other == com.example.tutorial.RecommendProductProtocol.AdvertisementItem.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000002;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasIconUrl()) {
+          bitField0_ |= 0x00000004;
+          iconUrl_ = other.iconUrl_;
+          onChanged();
+        }
+        if (other.hasExtension()) {
+          bitField0_ |= 0x00000008;
+          extension_ = other.extension_;
+          onChanged();
+        }
+        if (other.hasResType()) {
+          setResType(other.getResType());
+        }
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasPicUrl()) {
+          bitField0_ |= 0x00000040;
+          picUrl_ = other.picUrl_;
+          onChanged();
+        }
+        if (other.hasMusicPicSwitch()) {
+          setMusicPicSwitch(other.getMusicPicSwitch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.example.tutorial.RecommendProductProtocol.AdvertisementItem parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.example.tutorial.RecommendProductProtocol.AdvertisementItem) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional int32 type = 1;
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 type = 1;</code>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 1;</code>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional string name = 2;
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string iconUrl = 3;
+      private java.lang.Object iconUrl_ = "";
+      /**
+       * <code>optional string iconUrl = 3;</code>
+       */
+      public boolean hasIconUrl() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string iconUrl = 3;</code>
+       */
+      public java.lang.String getIconUrl() {
+        java.lang.Object ref = iconUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          iconUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string iconUrl = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIconUrlBytes() {
+        java.lang.Object ref = iconUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iconUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string iconUrl = 3;</code>
+       */
+      public Builder setIconUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        iconUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string iconUrl = 3;</code>
+       */
+      public Builder clearIconUrl() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        iconUrl_ = getDefaultInstance().getIconUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string iconUrl = 3;</code>
+       */
+      public Builder setIconUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        iconUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string extension = 4;
+      private java.lang.Object extension_ = "";
+      /**
+       * <code>optional string extension = 4;</code>
+       */
+      public boolean hasExtension() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string extension = 4;</code>
+       */
+      public java.lang.String getExtension() {
+        java.lang.Object ref = extension_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          extension_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string extension = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getExtensionBytes() {
+        java.lang.Object ref = extension_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          extension_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string extension = 4;</code>
+       */
+      public Builder setExtension(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        extension_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string extension = 4;</code>
+       */
+      public Builder clearExtension() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        extension_ = getDefaultInstance().getExtension();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string extension = 4;</code>
+       */
+      public Builder setExtensionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        extension_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 resType = 5;
+      private int resType_ ;
+      /**
+       * <code>optional int32 resType = 5;</code>
+       */
+      public boolean hasResType() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 resType = 5;</code>
+       */
+      public int getResType() {
+        return resType_;
+      }
+      /**
+       * <code>optional int32 resType = 5;</code>
+       */
+      public Builder setResType(int value) {
+        bitField0_ |= 0x00000010;
+        resType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 resType = 5;</code>
+       */
+      public Builder clearResType() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        resType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 id = 6;
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 6;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int32 id = 6;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 6;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000020;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 6;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional string picUrl = 7;
+      private java.lang.Object picUrl_ = "";
+      /**
+       * <code>optional string picUrl = 7;</code>
+       */
+      public boolean hasPicUrl() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string picUrl = 7;</code>
+       */
+      public java.lang.String getPicUrl() {
+        java.lang.Object ref = picUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          picUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string picUrl = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPicUrlBytes() {
+        java.lang.Object ref = picUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          picUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string picUrl = 7;</code>
+       */
+      public Builder setPicUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        picUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string picUrl = 7;</code>
+       */
+      public Builder clearPicUrl() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        picUrl_ = getDefaultInstance().getPicUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string picUrl = 7;</code>
+       */
+      public Builder setPicUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        picUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 musicPicSwitch = 8;
+      private int musicPicSwitch_ ;
+      /**
+       * <code>optional int32 musicPicSwitch = 8;</code>
+       */
+      public boolean hasMusicPicSwitch() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional int32 musicPicSwitch = 8;</code>
+       */
+      public int getMusicPicSwitch() {
+        return musicPicSwitch_;
+      }
+      /**
+       * <code>optional int32 musicPicSwitch = 8;</code>
+       */
+      public Builder setMusicPicSwitch(int value) {
+        bitField0_ |= 0x00000080;
+        musicPicSwitch_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 musicPicSwitch = 8;</code>
+       */
+      public Builder clearMusicPicSwitch() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        musicPicSwitch_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:tutorial.AdvertisementItem)
+    }
+
+    static {
+      defaultInstance = new AdvertisementItem(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:tutorial.AdvertisementItem)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_tutorial_HomeRecommend_descriptor;
   private static
@@ -14469,15 +15732,20 @@ public final class RecommendProductProtocol {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_tutorial_PublishProductList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_tutorial_PublishProductItem_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_tutorial_PublishProductItem_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_tutorial_AdvertisementList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_tutorial_AdvertisementList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_tutorial_PublishProductItem_descriptor;
+    internal_static_tutorial_AdvertisementItem_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_tutorial_PublishProductItem_fieldAccessorTable;
+      internal_static_tutorial_AdvertisementItem_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14499,48 +15767,52 @@ public final class RecommendProductProtocol {
       "\022\014\n\004desc\030\006 \001(\t\0220\n\naddProduct\030\007 \003(\0132\034.tut",
       "orial.PublishProductItem\022\013\n\003pic\030\010 \001(\t\022\r\n" +
       "\005isEnd\030\t \001(\005\022\022\n\ncategoryId\030\n \001(\005\022\027\n\017shut" +
-      "DownComment\030\013 \001(\005\022\016\n\006appUrl\030\014 \001(\t\"d\n\021Adv" +
-      "ertisementList\022\r\n\005total\030\001 \001(\005\022\r\n\005start\030\002" +
-      " \001(\005\022\013\n\003end\030\003 \001(\005\022\025\n\radvertisement\030\004 \003(\t" +
-      "\022\r\n\005fsUrl\030\005 \001(\t\"\262\013\n\022PublishProductItem\022\n" +
-      "\n\002id\030\001 \001(\003\022\016\n\006userId\030\002 \001(\005\022\022\n\nupdateTime" +
-      "\030\004 \001(\003\022\023\n\013releaseTime\030\005 \001(\003\022\022\n\ncategoryI" +
-      "d\030\006 \001(\005\022\017\n\007appName\030\007 \001(\t\022\020\n\010filePath\030\010 \001" +
-      "(\t\022\017\n\007fileMd5\030\t \001(\t\022\020\n\010fileSize\030\n \001(\003\022\023\n",
-      "\013description\030\014 \001(\t\022\r\n\005price\030\r \001(\001\022\032\n\022pac" +
-      "kagePermissions\030\016 \001(\t\022\023\n\013packageName\030\017 \001" +
-      "(\t\022\023\n\013apkVersName\030\020 \001(\t\022\017\n\007apkVers\030\021 \001(\005" +
-      "\022\022\n\nexceptList\030\022 \001(\t\022\017\n\007iconUrl\030\023 \001(\t\022\014\n" +
-      "\004pic1\030\024 \001(\t\022\014\n\004pic2\030\025 \001(\t\022\014\n\004pic3\030\026 \001(\t\022" +
-      "\014\n\004pic4\030\027 \001(\t\022\014\n\004pic5\030\030 \001(\t\022\017\n\007fileUrl\030\031" +
-      " \001(\t\022\016\n\006isFree\030  \001(\005\022\017\n\007downNum\030\" \001(\005\022\020\n" +
-      "\010avgGrade\030% \001(\001\022\020\n\010gradeNum\030& \001(\005\022\020\n\010mas" +
-      "terId\030\' \001(\003\022\020\n\010platform\030( \001(\005\022\022\n\nencrypt" +
-      "Key\030+ \001(\t\022\017\n\007addUrl1\030, \001(\t\022\017\n\007addUrl2\030- ",
-      "\001(\t\022\017\n\007addMd51\030. \001(\t\022\017\n\007addMd52\030/ \001(\t\022\r\n" +
-      "\005state\0300 \001(\005\022\017\n\007appType\0301 \001(\005\022\017\n\007payFlag" +
-      "\0302 \001(\005\022\024\n\014categoryName\0303 \001(\t\022\017\n\007point32\030" +
-      "4 \001(\005\022\021\n\tshortDesc\0305 \001(\t\022\021\n\tadaptInfo\0306 " +
-      "\001(\t\022\020\n\010downSpan\0307 \001(\t\022\016\n\006webUrl\0308 \001(\t\022\022\n" +
-      "\ncommentNum\0309 \001(\005\022\025\n\rtopCategoryId\030: \001(\005" +
-      "\022\025\n\rcategoryLabel\030; \001(\t\022\r\n\005isNew\030< \001(\005\022\020" +
-      "\n\010position\030= \001(\005\022\n\n\002os\030> \001(\005\022\016\n\006author\030?" +
-      " \001(\t\022\022\n\nupdateDesc\030@ \001(\t\022\023\n\013barCodePath\030" +
-      "D \001(\t\022\r\n\005isFit\030F \001(\005\022\025\n\rhdscreenshot1\030G ",
-      "\001(\t\022\025\n\rhdscreenshot2\030H \001(\t\022\025\n\rhdscreensh" +
-      "ot3\030I \001(\t\022\025\n\rhdscreenshot4\030J \001(\t\022\025\n\rhdsc" +
-      "reenshot5\030K \001(\t\022\020\n\010labelUrl\030L \001(\t\022\016\n\006osN" +
-      "ame\030M \001(\t\022\020\n\010checkMd5\030N \001(\t\022\020\n\010patchUrl\030" +
-      "O \001(\t\022\021\n\tpatchSize\030P \001(\003\022\014\n\004from\030Q \001(\005\022\r" +
-      "\n\005adPic\030R \001(\t\022\026\n\016hdAdScreenshot\030S \001(\t\022\014\n" +
-      "\004adId\030T \001(\003\022\016\n\006adType\030U \001(\005\022\017\n\007musicId\030V" +
-      " \001(\t\022\022\n\nsingerName\030W \001(\t\022\020\n\010singerId\030X \001" +
-      "(\005\022\016\n\006adName\030Z \001(\t\022\021\n\tadIconUrl\030[ \001(\t\022\023\n" +
-      "\013adExtension\030\\ \001(\t\022\021\n\tadResType\030] \001(\005\022\021\n",
-      "\tadContent\030^ \001(\t\022\020\n\010wordSize\030_ \001(\t\022\020\n\010bo" +
-      "okFrom\030` \001(\t\022\026\n\016authentication\030a \001(\003B0\n\024" +
-      "com.example.tutorialB\030RecommendProductPr" +
-      "otocol"
+      "DownComment\030\013 \001(\005\022\016\n\006appUrl\030\014 \001(\t\"\262\013\n\022Pu" +
+      "blishProductItem\022\n\n\002id\030\001 \001(\003\022\016\n\006userId\030\002" +
+      " \001(\005\022\022\n\nupdateTime\030\004 \001(\003\022\023\n\013releaseTime\030" +
+      "\005 \001(\003\022\022\n\ncategoryId\030\006 \001(\005\022\017\n\007appName\030\007 \001" +
+      "(\t\022\020\n\010filePath\030\010 \001(\t\022\017\n\007fileMd5\030\t \001(\t\022\020\n" +
+      "\010fileSize\030\n \001(\003\022\023\n\013description\030\014 \001(\t\022\r\n\005" +
+      "price\030\r \001(\001\022\032\n\022packagePermissions\030\016 \001(\t\022" +
+      "\023\n\013packageName\030\017 \001(\t\022\023\n\013apkVersName\030\020 \001(",
+      "\t\022\017\n\007apkVers\030\021 \001(\005\022\022\n\nexceptList\030\022 \001(\t\022\017" +
+      "\n\007iconUrl\030\023 \001(\t\022\014\n\004pic1\030\024 \001(\t\022\014\n\004pic2\030\025 " +
+      "\001(\t\022\014\n\004pic3\030\026 \001(\t\022\014\n\004pic4\030\027 \001(\t\022\014\n\004pic5\030" +
+      "\030 \001(\t\022\017\n\007fileUrl\030\031 \001(\t\022\016\n\006isFree\030  \001(\005\022\017" +
+      "\n\007downNum\030\" \001(\005\022\020\n\010avgGrade\030% \001(\001\022\020\n\010gra" +
+      "deNum\030& \001(\005\022\020\n\010masterId\030\' \001(\003\022\020\n\010platfor" +
+      "m\030( \001(\005\022\022\n\nencryptKey\030+ \001(\t\022\017\n\007addUrl1\030," +
+      " \001(\t\022\017\n\007addUrl2\030- \001(\t\022\017\n\007addMd51\030. \001(\t\022\017" +
+      "\n\007addMd52\030/ \001(\t\022\r\n\005state\0300 \001(\005\022\017\n\007appTyp" +
+      "e\0301 \001(\005\022\017\n\007payFlag\0302 \001(\005\022\024\n\014categoryName",
+      "\0303 \001(\t\022\017\n\007point32\0304 \001(\005\022\021\n\tshortDesc\0305 \001" +
+      "(\t\022\021\n\tadaptInfo\0306 \001(\t\022\020\n\010downSpan\0307 \001(\t\022" +
+      "\016\n\006webUrl\0308 \001(\t\022\022\n\ncommentNum\0309 \001(\005\022\025\n\rt" +
+      "opCategoryId\030: \001(\005\022\025\n\rcategoryLabel\030; \001(" +
+      "\t\022\r\n\005isNew\030< \001(\005\022\020\n\010position\030= \001(\005\022\n\n\002os" +
+      "\030> \001(\005\022\016\n\006author\030? \001(\t\022\022\n\nupdateDesc\030@ \001" +
+      "(\t\022\023\n\013barCodePath\030D \001(\t\022\r\n\005isFit\030F \001(\005\022\025" +
+      "\n\rhdscreenshot1\030G \001(\t\022\025\n\rhdscreenshot2\030H" +
+      " \001(\t\022\025\n\rhdscreenshot3\030I \001(\t\022\025\n\rhdscreens" +
+      "hot4\030J \001(\t\022\025\n\rhdscreenshot5\030K \001(\t\022\020\n\010lab",
+      "elUrl\030L \001(\t\022\016\n\006osName\030M \001(\t\022\020\n\010checkMd5\030" +
+      "N \001(\t\022\020\n\010patchUrl\030O \001(\t\022\021\n\tpatchSize\030P \001" +
+      "(\003\022\014\n\004from\030Q \001(\005\022\r\n\005adPic\030R \001(\t\022\026\n\016hdAdS" +
+      "creenshot\030S \001(\t\022\014\n\004adId\030T \001(\003\022\016\n\006adType\030" +
+      "U \001(\005\022\017\n\007musicId\030V \001(\t\022\022\n\nsingerName\030W \001" +
+      "(\t\022\020\n\010singerId\030X \001(\005\022\016\n\006adName\030Z \001(\t\022\021\n\t" +
+      "adIconUrl\030[ \001(\t\022\023\n\013adExtension\030\\ \001(\t\022\021\n\t" +
+      "adResType\030] \001(\005\022\021\n\tadContent\030^ \001(\t\022\020\n\010wo" +
+      "rdSize\030_ \001(\t\022\020\n\010bookFrom\030` \001(\t\022\026\n\016authen" +
+      "tication\030a \001(\003\"d\n\021AdvertisementList\022\r\n\005t",
+      "otal\030\001 \001(\005\022\r\n\005start\030\002 \001(\005\022\013\n\003end\030\003 \001(\005\022\025" +
+      "\n\radvertisement\030\004 \003(\t\022\r\n\005fsUrl\030\005 \001(\t\"\230\001\n" +
+      "\021AdvertisementItem\022\014\n\004type\030\001 \001(\005\022\014\n\004name" +
+      "\030\002 \001(\t\022\017\n\007iconUrl\030\003 \001(\t\022\021\n\textension\030\004 \001" +
+      "(\t\022\017\n\007resType\030\005 \001(\005\022\n\n\002id\030\006 \001(\005\022\016\n\006picUr" +
+      "l\030\007 \001(\t\022\026\n\016musicPicSwitch\030\010 \001(\005B0\n\024com.e" +
+      "xample.tutorialB\030RecommendProductProtoco" +
+      "l"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -14559,18 +15831,24 @@ public final class RecommendProductProtocol {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_tutorial_PublishProductList_descriptor,
               new java.lang.String[] { "Total", "Start", "End", "PublishProduct", "FsUrl", "Desc", "AddProduct", "Pic", "IsEnd", "CategoryId", "ShutDownComment", "AppUrl", });
-          internal_static_tutorial_AdvertisementList_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_tutorial_AdvertisementList_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_tutorial_AdvertisementList_descriptor,
-              new java.lang.String[] { "Total", "Start", "End", "Advertisement", "FsUrl", });
           internal_static_tutorial_PublishProductItem_descriptor =
-            getDescriptor().getMessageTypes().get(3);
+            getDescriptor().getMessageTypes().get(2);
           internal_static_tutorial_PublishProductItem_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_tutorial_PublishProductItem_descriptor,
               new java.lang.String[] { "Id", "UserId", "UpdateTime", "ReleaseTime", "CategoryId", "AppName", "FilePath", "FileMd5", "FileSize", "Description", "Price", "PackagePermissions", "PackageName", "ApkVersName", "ApkVers", "ExceptList", "IconUrl", "Pic1", "Pic2", "Pic3", "Pic4", "Pic5", "FileUrl", "IsFree", "DownNum", "AvgGrade", "GradeNum", "MasterId", "Platform", "EncryptKey", "AddUrl1", "AddUrl2", "AddMd51", "AddMd52", "State", "AppType", "PayFlag", "CategoryName", "Point32", "ShortDesc", "AdaptInfo", "DownSpan", "WebUrl", "CommentNum", "TopCategoryId", "CategoryLabel", "IsNew", "Position", "Os", "Author", "UpdateDesc", "BarCodePath", "IsFit", "Hdscreenshot1", "Hdscreenshot2", "Hdscreenshot3", "Hdscreenshot4", "Hdscreenshot5", "LabelUrl", "OsName", "CheckMd5", "PatchUrl", "PatchSize", "From", "AdPic", "HdAdScreenshot", "AdId", "AdType", "MusicId", "SingerName", "SingerId", "AdName", "AdIconUrl", "AdExtension", "AdResType", "AdContent", "WordSize", "BookFrom", "Authentication", });
+          internal_static_tutorial_AdvertisementList_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+          internal_static_tutorial_AdvertisementList_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_tutorial_AdvertisementList_descriptor,
+              new java.lang.String[] { "Total", "Start", "End", "Advertisement", "FsUrl", });
+          internal_static_tutorial_AdvertisementItem_descriptor =
+            getDescriptor().getMessageTypes().get(4);
+          internal_static_tutorial_AdvertisementItem_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_tutorial_AdvertisementItem_descriptor,
+              new java.lang.String[] { "Type", "Name", "IconUrl", "Extension", "ResType", "Id", "PicUrl", "MusicPicSwitch", });
           return null;
         }
       };

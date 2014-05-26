@@ -24,6 +24,6 @@ public class Oppo_recommend {
 		System.out.println(new String(CompressGzip.decompressGzip(recommendResult)));
 		System.out.println("------------------------------response------------------------------------------------");
 		HomeRecommend homeRecommend = RecommendProductProtocol.HomeRecommend.parseFrom(CompressGzip.decompressGzip(recommendResult));
-		AdvertisementList advertisementList = homeRecommend.getAdList();
+		System.out.println(homeRecommend.getAdList().getAdvertisement(0));
 	}
 }
