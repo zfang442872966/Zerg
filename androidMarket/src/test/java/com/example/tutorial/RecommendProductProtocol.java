@@ -13592,25 +13592,30 @@ public final class RecommendProductProtocol {
      */
     int getEnd();
 
-    // repeated string advertisement = 4;
+    // repeated .tutorial.AdvertisementItem advertisement = 4;
     /**
-     * <code>repeated string advertisement = 4;</code>
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
      */
-    java.util.List<java.lang.String>
-    getAdvertisementList();
+    java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementItem> 
+        getAdvertisementList();
     /**
-     * <code>repeated string advertisement = 4;</code>
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+     */
+    com.example.tutorial.RecommendProductProtocol.AdvertisementItem getAdvertisement(int index);
+    /**
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
      */
     int getAdvertisementCount();
     /**
-     * <code>repeated string advertisement = 4;</code>
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
      */
-    java.lang.String getAdvertisement(int index);
+    java.util.List<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder> 
+        getAdvertisementOrBuilderList();
     /**
-     * <code>repeated string advertisement = 4;</code>
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
      */
-    com.google.protobuf.ByteString
-        getAdvertisementBytes(int index);
+    com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder getAdvertisementOrBuilder(
+        int index);
 
     // optional string fsUrl = 5;
     /**
@@ -13695,10 +13700,10 @@ public final class RecommendProductProtocol {
             }
             case 34: {
               if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                advertisement_ = new com.google.protobuf.LazyStringArrayList();
+                advertisement_ = new java.util.ArrayList<com.example.tutorial.RecommendProductProtocol.AdvertisementItem>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              advertisement_.add(input.readBytes());
+              advertisement_.add(input.readMessage(com.example.tutorial.RecommendProductProtocol.AdvertisementItem.PARSER, extensionRegistry));
               break;
             }
             case 42: {
@@ -13715,7 +13720,7 @@ public final class RecommendProductProtocol {
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          advertisement_ = new com.google.protobuf.UnmodifiableLazyStringList(advertisement_);
+          advertisement_ = java.util.Collections.unmodifiableList(advertisement_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -13797,34 +13802,40 @@ public final class RecommendProductProtocol {
       return end_;
     }
 
-    // repeated string advertisement = 4;
+    // repeated .tutorial.AdvertisementItem advertisement = 4;
     public static final int ADVERTISEMENT_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList advertisement_;
+    private java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementItem> advertisement_;
     /**
-     * <code>repeated string advertisement = 4;</code>
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
      */
-    public java.util.List<java.lang.String>
-        getAdvertisementList() {
+    public java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementItem> getAdvertisementList() {
       return advertisement_;
     }
     /**
-     * <code>repeated string advertisement = 4;</code>
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+     */
+    public java.util.List<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder> 
+        getAdvertisementOrBuilderList() {
+      return advertisement_;
+    }
+    /**
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
      */
     public int getAdvertisementCount() {
       return advertisement_.size();
     }
     /**
-     * <code>repeated string advertisement = 4;</code>
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
      */
-    public java.lang.String getAdvertisement(int index) {
+    public com.example.tutorial.RecommendProductProtocol.AdvertisementItem getAdvertisement(int index) {
       return advertisement_.get(index);
     }
     /**
-     * <code>repeated string advertisement = 4;</code>
+     * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
      */
-    public com.google.protobuf.ByteString
-        getAdvertisementBytes(int index) {
-      return advertisement_.getByteString(index);
+    public com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder getAdvertisementOrBuilder(
+        int index) {
+      return advertisement_.get(index);
     }
 
     // optional string fsUrl = 5;
@@ -13874,7 +13885,7 @@ public final class RecommendProductProtocol {
       total_ = 0;
       start_ = 0;
       end_ = 0;
-      advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      advertisement_ = java.util.Collections.emptyList();
       fsUrl_ = "";
     }
     private byte memoizedIsInitialized = -1;
@@ -13899,7 +13910,7 @@ public final class RecommendProductProtocol {
         output.writeInt32(3, end_);
       }
       for (int i = 0; i < advertisement_.size(); i++) {
-        output.writeBytes(4, advertisement_.getByteString(i));
+        output.writeMessage(4, advertisement_.get(i));
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(5, getFsUrlBytes());
@@ -13925,14 +13936,9 @@ public final class RecommendProductProtocol {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, end_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < advertisement_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(advertisement_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getAdvertisementList().size();
+      for (int i = 0; i < advertisement_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, advertisement_.get(i));
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
@@ -14046,6 +14052,7 @@ public final class RecommendProductProtocol {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getAdvertisementFieldBuilder();
         }
       }
       private static Builder create() {
@@ -14060,8 +14067,12 @@ public final class RecommendProductProtocol {
         bitField0_ = (bitField0_ & ~0x00000002);
         end_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
-        advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        if (advertisementBuilder_ == null) {
+          advertisement_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          advertisementBuilder_.clear();
+        }
         fsUrl_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
@@ -14104,12 +14115,15 @@ public final class RecommendProductProtocol {
           to_bitField0_ |= 0x00000004;
         }
         result.end_ = end_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          advertisement_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              advertisement_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+        if (advertisementBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            advertisement_ = java.util.Collections.unmodifiableList(advertisement_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.advertisement_ = advertisement_;
+        } else {
+          result.advertisement_ = advertisementBuilder_.build();
         }
-        result.advertisement_ = advertisement_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000008;
         }
@@ -14139,15 +14153,31 @@ public final class RecommendProductProtocol {
         if (other.hasEnd()) {
           setEnd(other.getEnd());
         }
-        if (!other.advertisement_.isEmpty()) {
-          if (advertisement_.isEmpty()) {
-            advertisement_ = other.advertisement_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureAdvertisementIsMutable();
-            advertisement_.addAll(other.advertisement_);
+        if (advertisementBuilder_ == null) {
+          if (!other.advertisement_.isEmpty()) {
+            if (advertisement_.isEmpty()) {
+              advertisement_ = other.advertisement_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureAdvertisementIsMutable();
+              advertisement_.addAll(other.advertisement_);
+            }
+            onChanged();
           }
-          onChanged();
+        } else {
+          if (!other.advertisement_.isEmpty()) {
+            if (advertisementBuilder_.isEmpty()) {
+              advertisementBuilder_.dispose();
+              advertisementBuilder_ = null;
+              advertisement_ = other.advertisement_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              advertisementBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getAdvertisementFieldBuilder() : null;
+            } else {
+              advertisementBuilder_.addAllMessages(other.advertisement_);
+            }
+          }
         }
         if (other.hasFsUrl()) {
           bitField0_ |= 0x00000010;
@@ -14280,97 +14310,244 @@ public final class RecommendProductProtocol {
         return this;
       }
 
-      // repeated string advertisement = 4;
-      private com.google.protobuf.LazyStringList advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      // repeated .tutorial.AdvertisementItem advertisement = 4;
+      private java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementItem> advertisement_ =
+        java.util.Collections.emptyList();
       private void ensureAdvertisementIsMutable() {
         if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          advertisement_ = new com.google.protobuf.LazyStringArrayList(advertisement_);
+          advertisement_ = new java.util.ArrayList<com.example.tutorial.RecommendProductProtocol.AdvertisementItem>(advertisement_);
           bitField0_ |= 0x00000008;
          }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.example.tutorial.RecommendProductProtocol.AdvertisementItem, com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder, com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder> advertisementBuilder_;
+
       /**
-       * <code>repeated string advertisement = 4;</code>
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
        */
-      public java.util.List<java.lang.String>
-          getAdvertisementList() {
-        return java.util.Collections.unmodifiableList(advertisement_);
+      public java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementItem> getAdvertisementList() {
+        if (advertisementBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(advertisement_);
+        } else {
+          return advertisementBuilder_.getMessageList();
+        }
       }
       /**
-       * <code>repeated string advertisement = 4;</code>
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
        */
       public int getAdvertisementCount() {
-        return advertisement_.size();
+        if (advertisementBuilder_ == null) {
+          return advertisement_.size();
+        } else {
+          return advertisementBuilder_.getCount();
+        }
       }
       /**
-       * <code>repeated string advertisement = 4;</code>
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
        */
-      public java.lang.String getAdvertisement(int index) {
-        return advertisement_.get(index);
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementItem getAdvertisement(int index) {
+        if (advertisementBuilder_ == null) {
+          return advertisement_.get(index);
+        } else {
+          return advertisementBuilder_.getMessage(index);
+        }
       }
       /**
-       * <code>repeated string advertisement = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAdvertisementBytes(int index) {
-        return advertisement_.getByteString(index);
-      }
-      /**
-       * <code>repeated string advertisement = 4;</code>
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
        */
       public Builder setAdvertisement(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAdvertisementIsMutable();
-        advertisement_.set(index, value);
-        onChanged();
+          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementItem value) {
+        if (advertisementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdvertisementIsMutable();
+          advertisement_.set(index, value);
+          onChanged();
+        } else {
+          advertisementBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated string advertisement = 4;</code>
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public Builder setAdvertisement(
+          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder builderForValue) {
+        if (advertisementBuilder_ == null) {
+          ensureAdvertisementIsMutable();
+          advertisement_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          advertisementBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public Builder addAdvertisement(com.example.tutorial.RecommendProductProtocol.AdvertisementItem value) {
+        if (advertisementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdvertisementIsMutable();
+          advertisement_.add(value);
+          onChanged();
+        } else {
+          advertisementBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
        */
       public Builder addAdvertisement(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAdvertisementIsMutable();
-        advertisement_.add(value);
-        onChanged();
+          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementItem value) {
+        if (advertisementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdvertisementIsMutable();
+          advertisement_.add(index, value);
+          onChanged();
+        } else {
+          advertisementBuilder_.addMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated string advertisement = 4;</code>
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public Builder addAdvertisement(
+          com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder builderForValue) {
+        if (advertisementBuilder_ == null) {
+          ensureAdvertisementIsMutable();
+          advertisement_.add(builderForValue.build());
+          onChanged();
+        } else {
+          advertisementBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public Builder addAdvertisement(
+          int index, com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder builderForValue) {
+        if (advertisementBuilder_ == null) {
+          ensureAdvertisementIsMutable();
+          advertisement_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          advertisementBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
        */
       public Builder addAllAdvertisement(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureAdvertisementIsMutable();
-        super.addAll(values, advertisement_);
-        onChanged();
+          java.lang.Iterable<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementItem> values) {
+        if (advertisementBuilder_ == null) {
+          ensureAdvertisementIsMutable();
+          super.addAll(values, advertisement_);
+          onChanged();
+        } else {
+          advertisementBuilder_.addAllMessages(values);
+        }
         return this;
       }
       /**
-       * <code>repeated string advertisement = 4;</code>
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
        */
       public Builder clearAdvertisement() {
-        advertisement_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        if (advertisementBuilder_ == null) {
+          advertisement_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          advertisementBuilder_.clear();
+        }
         return this;
       }
       /**
-       * <code>repeated string advertisement = 4;</code>
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
        */
-      public Builder addAdvertisementBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAdvertisementIsMutable();
-        advertisement_.add(value);
-        onChanged();
+      public Builder removeAdvertisement(int index) {
+        if (advertisementBuilder_ == null) {
+          ensureAdvertisementIsMutable();
+          advertisement_.remove(index);
+          onChanged();
+        } else {
+          advertisementBuilder_.remove(index);
+        }
         return this;
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder getAdvertisementBuilder(
+          int index) {
+        return getAdvertisementFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder getAdvertisementOrBuilder(
+          int index) {
+        if (advertisementBuilder_ == null) {
+          return advertisement_.get(index);  } else {
+          return advertisementBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public java.util.List<? extends com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder> 
+           getAdvertisementOrBuilderList() {
+        if (advertisementBuilder_ != null) {
+          return advertisementBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(advertisement_);
+        }
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder addAdvertisementBuilder() {
+        return getAdvertisementFieldBuilder().addBuilder(
+            com.example.tutorial.RecommendProductProtocol.AdvertisementItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder addAdvertisementBuilder(
+          int index) {
+        return getAdvertisementFieldBuilder().addBuilder(
+            index, com.example.tutorial.RecommendProductProtocol.AdvertisementItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .tutorial.AdvertisementItem advertisement = 4;</code>
+       */
+      public java.util.List<com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder> 
+           getAdvertisementBuilderList() {
+        return getAdvertisementFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.example.tutorial.RecommendProductProtocol.AdvertisementItem, com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder, com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder> 
+          getAdvertisementFieldBuilder() {
+        if (advertisementBuilder_ == null) {
+          advertisementBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.example.tutorial.RecommendProductProtocol.AdvertisementItem, com.example.tutorial.RecommendProductProtocol.AdvertisementItem.Builder, com.example.tutorial.RecommendProductProtocol.AdvertisementItemOrBuilder>(
+                  advertisement_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          advertisement_ = null;
+        }
+        return advertisementBuilder_;
       }
 
       // optional string fsUrl = 5;
@@ -15804,15 +15981,15 @@ public final class RecommendProductProtocol {
       "adIconUrl\030[ \001(\t\022\023\n\013adExtension\030\\ \001(\t\022\021\n\t" +
       "adResType\030] \001(\005\022\021\n\tadContent\030^ \001(\t\022\020\n\010wo" +
       "rdSize\030_ \001(\t\022\020\n\010bookFrom\030` \001(\t\022\026\n\016authen" +
-      "tication\030a \001(\003\"d\n\021AdvertisementList\022\r\n\005t",
-      "otal\030\001 \001(\005\022\r\n\005start\030\002 \001(\005\022\013\n\003end\030\003 \001(\005\022\025" +
-      "\n\radvertisement\030\004 \003(\t\022\r\n\005fsUrl\030\005 \001(\t\"\230\001\n" +
-      "\021AdvertisementItem\022\014\n\004type\030\001 \001(\005\022\014\n\004name" +
-      "\030\002 \001(\t\022\017\n\007iconUrl\030\003 \001(\t\022\021\n\textension\030\004 \001" +
-      "(\t\022\017\n\007resType\030\005 \001(\005\022\n\n\002id\030\006 \001(\005\022\016\n\006picUr" +
-      "l\030\007 \001(\t\022\026\n\016musicPicSwitch\030\010 \001(\005B0\n\024com.e" +
-      "xample.tutorialB\030RecommendProductProtoco" +
-      "l"
+      "tication\030a \001(\003\"\201\001\n\021AdvertisementList\022\r\n\005",
+      "total\030\001 \001(\005\022\r\n\005start\030\002 \001(\005\022\013\n\003end\030\003 \001(\005\022" +
+      "2\n\radvertisement\030\004 \003(\0132\033.tutorial.Advert" +
+      "isementItem\022\r\n\005fsUrl\030\005 \001(\t\"\230\001\n\021Advertise" +
+      "mentItem\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\017\n\007" +
+      "iconUrl\030\003 \001(\t\022\021\n\textension\030\004 \001(\t\022\017\n\007resT" +
+      "ype\030\005 \001(\005\022\n\n\002id\030\006 \001(\005\022\016\n\006picUrl\030\007 \001(\t\022\026\n" +
+      "\016musicPicSwitch\030\010 \001(\005B0\n\024com.example.tut" +
+      "orialB\030RecommendProductProtocol"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
