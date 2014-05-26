@@ -23,5 +23,12 @@ public class Oppo_fstcate {
 		System.out.println(new String(CompressGzip.decompressGzip(result)));
 		System.out.println("---------------------------------------------------------------");
 		System.out.println(PublishProductProtocol.PublishProductList.parseFrom(CompressGzip.decompressGzip(result)).toString());
+//		PublishProductProtocol.PublishProductList localPublishProductList = PublishProductProtocol.PublishProductList.parseFrom(CompressGzip.decompressGzip(result));
+//		System.out.println("------------------------------------------------------------------------------");
+//		if (localPublishProductList.getPublishProductList().size() > 0) {
+//			for (int i = 0; i < localPublishProductList.getPublishProductList().size(); i++) {
+//				System.out.println((i + 1) + "	" + localPublishProductList.getPublishProduct(i).getAppName() + "	" + localPublishProductList.getPublishProduct(i).getPackageName());
+//			}
+//		}
 	}
 }

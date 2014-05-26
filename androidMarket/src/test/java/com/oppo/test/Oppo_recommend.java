@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import com.example.tutorial.ListCategoryProductProtocol;
 import com.example.tutorial.RecommendProductProtocol;
+import com.example.tutorial.RecommendProductProtocol.AdvertisementList;
+import com.example.tutorial.RecommendProductProtocol.HomeRecommend;
 import com.market.service.implement.Bytes2HexString;
 import com.market.service.implement.CompressGzip;
 
@@ -21,7 +23,7 @@ public class Oppo_recommend {
 		byte[] recommendResult = OppoHttpURLConnection.httpURLConnection("http://i3.store.nearme.com.cn/client/get_recommend_product.pb", recommendByte);
 		System.out.println(new String(CompressGzip.decompressGzip(recommendResult)));
 		System.out.println("------------------------------response------------------------------------------------");
-		System.out.println(RecommendProductProtocol.HomeRecommend.parseFrom(CompressGzip.decompressGzip(recommendResult)).toString());
+		HomeRecommend homeRecommend = RecommendProductProtocol.HomeRecommend.parseFrom(CompressGzip.decompressGzip(recommendResult));
+		AdvertisementList advertisementList = homeRecommend.getAdList();
 	}
-
 }
