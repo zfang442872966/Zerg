@@ -10,6 +10,7 @@
 
 	<bean id="sendHttpRequest" class="com.market.service.implement.SendHttpRequestImpl"
 		scope="singleton" init-method="init"></bean>
+
 	<bean id="randomService" class="com.market.service.implement.RandomServiceImpl"
 		scope="singleton" init-method="init"></bean>
 </beans>
