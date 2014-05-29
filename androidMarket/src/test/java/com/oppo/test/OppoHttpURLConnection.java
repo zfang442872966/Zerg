@@ -12,7 +12,7 @@ import com.example.tutorial.PublishProductProtocol;
 import com.market.service.implement.CompressGzip;
 
 /**
- * 
+ * 排行
  * @author zfang
  * 
  */
