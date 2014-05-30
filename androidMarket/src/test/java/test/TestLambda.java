@@ -19,17 +19,21 @@ public class TestLambda {
 			}
 		};
 		r.run();
-
+		
+		String b = "aaa";
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
 				System.out.println("传统的创建一个线程并运行的方式");
+				System.out.println(b);
 			}
 		}).start();
-
+		
+		String a = "aaa";
 		// lambda
 		new Thread(() -> {
 			System.out.println("lambda!");
+			System.out.println(a);
 		}).start();
 	}
 
