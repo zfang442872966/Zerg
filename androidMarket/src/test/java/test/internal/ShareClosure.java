@@ -11,7 +11,7 @@ public class ShareClosure {
 			final int copy = i;
 			list.add(new Action() {
 				@Override
-				public void Run() {
+				public void run() {
 					System.out.println(copy);
 				}
 			});
@@ -20,7 +20,7 @@ public class ShareClosure {
 
 	public void Output() {
 		for (Action a : list) {
-			a.Run();
+			a.run();
 		}
 	}
 
