@@ -5,21 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title></title>
-<script type="text/javascript">
-	//闭包
-	function f1() {
-		var n = 99;
-		function f2() {
-			alert(n);
-		}
-		return f2();
-	}
-	f1();
-</script>
 </head>
 <body>
 	<table>
-
 		<tr>
 			<td><h4>response</h4></td>
 		</tr>
