@@ -32,7 +32,7 @@ public class SendHttpRequestImpl implements SendHttpRequest {
 	public String sendGet(String geturi, List<NameValuePair> prarmeters, Header[] headers) throws URISyntaxException, ClientProtocolException, IOException {
 		String responseBody = null;
 		CloseableHttpClient httpclient = HttpClients.createDefault();
-		HttpHost proxy = new HttpHost("192.168.4.69", 8888);
+		HttpHost proxy = new HttpHost("192.168.4.40", 8888);
 		RequestConfig config = RequestConfig.custom().setProxy(proxy).build();
 		try {
 			URI uri = new URIBuilder(geturi).addParameters(prarmeters).build();
@@ -62,7 +62,7 @@ public class SendHttpRequestImpl implements SendHttpRequest {
 	public String sendPost(String posturi, List<NameValuePair> prarmeters, Header[] headers) throws ClientProtocolException, IOException {
 		String responseBody = null;
 		CloseableHttpClient httpclient = HttpClients.createDefault();
-		HttpHost proxy = new HttpHost("192.168.4.69", 8888);
+		HttpHost proxy = new HttpHost("192.168.4.40", 8888);
 		RequestConfig config = RequestConfig.custom().setProxy(proxy).build();
 		try {
 			HttpPost httppost = new HttpPost(posturi);
