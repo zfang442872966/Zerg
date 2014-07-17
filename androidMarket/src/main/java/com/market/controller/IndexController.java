@@ -115,7 +115,8 @@ public class IndexController {
 	@RequestMapping("/getRequest")
 	public void testMail() {
 		SimpleMailMessage msg = new SimpleMailMessage();
-		msg.setTo("15214379145@163.com");
+		msg.setFrom("zfang@ximalaya.com");
+		msg.setTo("zfang@ximalaya.com");
 		msg.setSubject("test");
 		msg.setText("test");
 		sender.send(msg);
