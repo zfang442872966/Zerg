@@ -114,6 +114,7 @@ public class IndexController {
 
 	/**
 	 * 发邮件功能
+	 * 
 	 */
 	@RequestMapping("/sendEmail")
 	public ModelAndView testMail() {
