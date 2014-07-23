@@ -1,4 +1,4 @@
-package test;
+package com.jdk8.features;
 
 /**
  * 函数式接口是只包含一个抽象方法的接口. 在使用lambda表达式时，只需要提供形式参数和方法体。由于函数式接口只有一个抽象方法，

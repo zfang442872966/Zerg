@@ -1,4 +1,4 @@
-package testinterface;
+package com.jdk8.features;
 
 public interface TestInterface {
 

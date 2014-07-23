@@ -1,4 +1,4 @@
-package test;
+package com.java.net;
 
 import java.net.Inet4Address;
 import java.net.Inet6Address;

@@ -30,7 +30,7 @@ public class IndexController {
 	@Autowired
 	private JavaMailSender sender;
 
-	// @RequestMapping("/getRequest")
+	@RequestMapping("/getRequest")
 	public ModelAndView getRequest(@RequestParam("frequency") int frequency) {
 		int successes = 0;
 		for (int i = 0; i < frequency; i++) {
@@ -112,13 +112,20 @@ public class IndexController {
 		return mav;
 	}
 
-	@RequestMapping("/getRequest")
-	public void testMail() {
+	/**
+	 * 发邮件功能
+	 */
+	@RequestMapping("/sendEmail")
+	public ModelAndView testMail() {
 		SimpleMailMessage msg = new SimpleMailMessage();
 		msg.setFrom("zfang@ximalaya.com");
 		msg.setTo("zfang@ximalaya.com");
 		msg.setSubject("test");
 		msg.setText("test");
 		sender.send(msg);
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("email", "Mail sent successfully");
+		mav.setViewName("index");
+		return mav;
 	}
 }

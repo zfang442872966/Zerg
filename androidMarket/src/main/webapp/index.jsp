@@ -8,27 +8,29 @@
 <title>Android Market</title>
 </head>
 <body>
-	<h3>Android Market</h3>
 	<form action="<c:url value='/getRequest.html'/>">
 		<table>
 			<tr>
 				<td>frequency</td>
 				<td><input name="frequency" type="text" value="1"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="Send get request"></td>
+				<td><input type="submit" value="Send get request"></td>
 			</tr>
 		</table>
 	</form>
-	<br />
 	<form action="<c:url value='/postRequest.html'/>">
 		<table>
 			<tr>
 				<td>frequency</td>
 				<td><input name="frequency" type="text" value="1"></td>
+				<td><input type="submit" value="Send post request"></td>
 			</tr>
+		</table>
+	</form>
+	<form action="<c:url value='/sendEmail.html'/>">
+		<table>
 			<tr>
-				<td colspan="2"><input type="submit" value="Send post request"></td>
+				<td>sendEmail</td>
+				<td><input type="submit" value="Send e-mail"></td>
 			</tr>
 		</table>
 	</form>

@@ -17,6 +17,9 @@
 		<tr>
 			<td>${post}</td>
 		</tr>
+		<tr>
+			<td>${email}</td>
+		</tr>
 	</table>
 </body>
 </html>

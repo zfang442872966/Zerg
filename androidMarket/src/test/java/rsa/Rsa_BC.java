@@ -1,4 +1,4 @@
-package test;
+package rsa;
 
 import java.io.ByteArrayOutputStream;
 import java.security.Key;
@@ -63,9 +63,10 @@ public class Rsa_BC {
 			i1 = k1;
 		} while (true);
 	}
-	
+
 	/**
 	 * RSA
+	 * 
 	 * @param key
 	 * @param abyte0
 	 * @return
@@ -85,7 +86,7 @@ public class Rsa_BC {
 	public static void main(String[] args) {
 		// String str3 = UUID.randomUUID().toString().replaceAll("-", "");
 		String str3 = "89cbeb0073bf4e2b91a227f211e6b62b";
-//		String str3 = "popozh RSA test";
+		// String str3 = "popozh RSA test";
 		System.out.println("randomUUID:" + str3);
 		String rsa_key = "30819F300D06092A864886F70D010101050003818D00308189028181008F757553E3217531CF77B6FA1F5A9548256FED127CB14CA89402057350F4C4F2FC17E4B7FE3420BDBB598BC7F3D01F5F85B81C6F618913A372C3F3E656D31A5B1517B695E176124EEBB9BA18BF29611CCC70AB91CFB64352824442CBDBBF359FE8CAB635F0566A7E1819664968358E38A1AA1247231BFEB6807E3154265081FD0203010001";
 		byte[] arrayOfByte = a(rsa_key.toCharArray());

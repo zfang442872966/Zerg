@@ -1,4 +1,4 @@
-package test.java.util.concurrent;
+package com.jdk8.features;
 
 public class TestConcurrent {
 
