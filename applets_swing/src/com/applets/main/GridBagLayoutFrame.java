@@ -43,7 +43,7 @@ public class GridBagLayoutFrame extends JFrame {
 	}
 
 	private void initComponent() {
-
+ 
 		label.setText("添加选项：");
 		addButton.setText("添加");
 		leftList.setPreferredSize(new Dimension(150, 150));
