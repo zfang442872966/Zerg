@@ -22,7 +22,7 @@ return array (
     'status' => '1',
     'ip' => '127.0.0.1',
     'views' => '5',
-    'format_time' => '16小时前',
+    'format_time' => '20小时前',
   ),
   1 => 
   array (
@@ -46,7 +46,7 @@ return array (
     'status' => '1',
     'ip' => '127.0.0.1',
     'views' => '3',
-    'format_time' => '16小时前',
+    'format_time' => '20小时前',
   ),
 );
 ?>

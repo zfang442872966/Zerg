@@ -23,7 +23,7 @@ return array (
     'ip' => '127.0.0.1',
     'views' => '3',
     'category_name' => '默认分类',
-    'format_time' => '16小时前',
+    'format_time' => '20小时前',
     'url' => '<?=SITE_URL?>?q-2.html',
   ),
   1 => 
@@ -49,7 +49,7 @@ return array (
     'ip' => '127.0.0.1',
     'views' => '5',
     'category_name' => '默认分类',
-    'format_time' => '16小时前',
+    'format_time' => '20小时前',
     'url' => '<?=SITE_URL?>?q-1.html',
   ),
 );
