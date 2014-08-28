@@ -92,7 +92,7 @@
                     <div class="slider-box clearfix">
 
                         <!--{loop $topiclist $index $topic}-->
-                        <div class="topic" id="{$topic['id']}" <!--{if $index!=0}-->style="display:none"<!--{/if}-->>
+                        <div class="topic" id="{$topic['id']}">
                              <img width="228" height="170" src="{SITE_URL}{$topic['image']}"/>
                             <h4>{eval echo cutstr($topic['title'],14,'');}</h4>
                             <p>{eval echo cutstr($topic['describtion'],60,'');}</p>
@@ -106,7 +106,7 @@
                         <div class="clr"></div>
                         <ul class="pagination">
                             <!--{loop $topiclist $index $topic}-->
-                            <li <!--{if $index==0}-->class="spanhover"<!--{/if}--> topicid="{$topic['id']}"><span>{eval echo cutstr($topic['title'],14,'');}</span></li>
+                            <li class="spanhover" topicid="{$topic['id']}"><span>{eval echo cutstr($topic['title'],14,'');}</span></li>
                             <!--{/loop}-->
                         </ul>
                         <div class="more"><a href="{url topic/default}" target="_blank">更多</a></div>

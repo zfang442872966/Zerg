@@ -6,8 +6,8 @@
             <div class="title">{$navtitle}</div>
             <div id="qa-tabcard">
                 <ul>
-                    <li<!--{if $status==1}--> class="on"<!--{/if}-->><!--{if $status==1}-->待解决问题<!--{else}--><a href="{url user/space_ask/$member['uid']}">待解决问题</a><!--{/if}--></li>
-                    <li<!--{if $status==2}--> class="on"<!--{/if}-->><!--{if $status==2}-->已解决问题<!--{else}--><a href="{url user/space_ask/$member['uid']/2}">已解决问题</a><!--{/if}--></li>
+                    <li><!--{if $status==1}-->待解决问题<!--{else}--><a href="{url user/space_ask/$member['uid']}">待解决问题</a><!--{/if}--></li>
+                    <li><!--{if $status==2}-->已解决问题<!--{else}--><a href="{url user/space_ask/$member['uid']/2}">已解决问题</a><!--{/if}--></li>
                 </ul>
             </div>
 

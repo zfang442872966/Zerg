@@ -6,9 +6,9 @@
             <div class="title">我的回答</div>
             <div id="qa-tabcard">
                 <ul>
-                    <li<!--{if $status==1}--> class="on"<!--{/if}-->><!--{if $status==1}-->未采纳<!--{else}--><a href="{url user/answer/1}">未采纳</a><!--{/if}--></li>
-                    <li<!--{if $status==2}--> class="on"<!--{/if}-->><!--{if $status==2}-->已采纳<!--{else}--><a href="{url user/answer/2}">已采纳</a><!--{/if}--></li>
-                    <li<!--{if $status==0}--> class="on"<!--{/if}-->><!--{if $status==0}-->审核中<!--{else}--><a href="{url user/answer/0}">审核中</a><!--{/if}--></li>
+                    <li><!--{if $status==1}-->未采纳<!--{else}--><a href="{url user/answer/1}">未采纳</a><!--{/if}--></li>
+                    <li><!--{if $status==2}-->已采纳<!--{else}--><a href="{url user/answer/2}">已采纳</a><!--{/if}--></li>
+                    <li><!--{if $status==0}-->审核中<!--{else}--><a href="{url user/answer/0}">审核中</a><!--{/if}--></li>
                 </ul>
             </div>
 

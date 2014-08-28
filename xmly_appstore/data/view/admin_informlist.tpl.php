@@ -32,7 +32,8 @@
 <td class="altbg2"><?=$inform['time']?></td>
 </tr>
 <? } } ?>
-<!--<? if($departstr) { ?><tr class="smalltxt">
+<!--
+<? if($departstr) { ?><tr class="smalltxt">
 <td class="altbg2" colspan="6"><?=$departstr?></td>
 </tr><? } ?><tr>
 <td colspan="6" class="altbg1"><input class="button" type="button" name="delete" onclick="ondelete();" value="删除" /></td>
@@ -52,4 +53,5 @@
         document.userForm.action="index.php?admin_inform/remove<?=$setting['seo_suffix']?>";
         document.userForm.submit();
     }
-</script>
+</script> 
+-->

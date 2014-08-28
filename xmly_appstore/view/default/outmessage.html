@@ -6,8 +6,8 @@
             <div class="title">我的消息<span class="flright"><input type="button" value="写消息" class="normal-button" onclick="javascript:document.location = '{url message/send}'"/></span></div>            
             <div id="qa-tabcard">
                 <ul>
-                    <li<!--{if $regular=="message/inbox"}--> class="on"<!--{/if}-->><!--{if $regular=="message/inbox"}-->收件箱<!--{else}--><a href="{url message/inbox/personal}">收件箱</a><!--{/if}--></li>
-                    <li<!--{if $regular=="message/outbox"}--> class="on"<!--{/if}-->><!--{if $regular=="message/outbox"}-->发件箱<!--{else}--><a href="{url message/outbox}">发件箱</a><!--{/if}--></li>
+                    <li><!--{if $regular=="message/inbox"}-->收件箱<!--{else}--><a href="{url message/inbox/personal}">收件箱</a><!--{/if}--></li>
+                    <li><!--{if $regular=="message/outbox"}-->发件箱<!--{else}--><a href="{url message/outbox}">发件箱</a><!--{/if}--></li>
                 </ul>
             </div>
             <ul class="q-tabmod mt10">

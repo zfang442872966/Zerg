@@ -44,7 +44,7 @@
             <table  id="table1" cellspacing="1" cellpadding="4" width="100%" align="center" style="border: 0 none !important; border-collapse: separate !important;empty-cells: show;margin-bottom: 0px;"> 
                 <tr align="center" class="smalltxt">
                     <td width="10%" class="altbg2"><input class="checkbox" type="checkbox" value="{$topic['id']}" name="tid[]"></td>
-                    <td width="10%" class="altbg2" align="center"><img src="{SITE_URL}{$topic['image']}" width="50px;" height="50px;"</td>
+                    <td width="10%" class="altbg2" align="center"><img src="{SITE_URL}{$topic['image']}" width="50px;" height="50px;"></td>
                     <td width="20%" class="altbg2"><input name="order[]" type="hidden" value="{$topic['id']}"/><strong>{$topic['title']}</strong></td>
                     <td width="20%" class="altbg2" align="center">{$topic['describtion']}</td>
                     <td width="10%" class="altbg2" align="center"><img src="{SITE_URL}css/admin/edit.png" style="cursor:pointer" onclick="document.location.href='index.php?admin_topic/edit/$topic['id']{$setting['seo_suffix']}'"></td>

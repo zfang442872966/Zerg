@@ -6,10 +6,10 @@
             <div class="title">我的提问</div>
             <div id="qa-tabcard">
                 <ul>
-                    <li<!--{if $status==1}--> class="on"<!--{/if}-->><!--{if $status==1}-->待解决<!--{else}--><a href="{url user/ask/1}">待解决</a><!--{/if}--></li>
-                    <li<!--{if $status==2}--> class="on"<!--{/if}-->><!--{if $status==2}-->已解决<!--{else}--><a href="{url user/ask/2}">已解决</a><!--{/if}--></li>
-                    <li<!--{if $status==0}--> class="on"<!--{/if}-->><!--{if $status==0}-->审核中<!--{else}--><a href="{url user/ask/0}">审核中</a><!--{/if}--></li>
-                    <li<!--{if $status==9}--> class="on"<!--{/if}-->><!--{if $status==9}-->已过期<!--{else}--><a href="{url user/ask/9}">已过期</a><!--{/if}--></li>
+                    <li><!--{if $status==1}-->待解决<!--{else}--><a href="{url user/ask/1}">待解决</a><!--{/if}--></li>
+                    <li><!--{if $status==2}-->已解决<!--{else}--><a href="{url user/ask/2}">已解决</a><!--{/if}--></li>
+                    <li><!--{if $status==0}-->审核中<!--{else}--><a href="{url user/ask/0}">审核中</a><!--{/if}--></li>
+                    <li><!--{if $status==9}-->已过期<!--{else}--><a href="{url user/ask/9}">已过期</a><!--{/if}--></li>
                 </ul>
             </div>
 

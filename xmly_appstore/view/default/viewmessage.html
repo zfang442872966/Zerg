@@ -8,8 +8,8 @@
             <div class="title">我的消息<span class="flright"><input type="button" value="写消息" class="normal-button" onclick="javascript:document.location = '{url message/send}'"/></span></div>            
             <div id="qa-tabcard">
                 <ul>
-                    <li<!--{if $type=="personal"}--> class="on"<!--{/if}-->><!--{if $type=="personal"}-->私人消息<!--{else}--><a href="{url message/personal}">私人消息</a><!--{/if}--></li>
-                    <li<!--{if $type=="system"}--> class="on"<!--{/if}-->><!--{if $type=="system"}-->系统消息<!--{else}--><a href="{url message/system}">系统消息</a><!--{/if}--></li>
+                    <li><!--{if $type=="personal"}-->私人消息<!--{else}--><a href="{url message/personal}">私人消息</a><!--{/if}--></li>
+                    <li><!--{if $type=="system"}-->系统消息<!--{else}--><a href="{url message/system}">系统消息</a><!--{/if}--></li>
                 </ul>
             </div>
             <form name="msgform" action="{url message/remove}" method="POST" onsubmit="javascript:if (!confirm('确定删除所选消息?')) return false;">
