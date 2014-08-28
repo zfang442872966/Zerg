@@ -12,7 +12,7 @@ return array (
     'answers' => '1',
     'adopts' => '0',
     'grouptitle' => '书童',
-    'avatar' => 'http://127.0.0.1/tipask/css/default/avatar.gif',
+    'avatar' => 'http://127.0.0.1/tipask_ backUp_20140828/css/default/avatar.gif',
   ),
   1 => 
   array (
@@ -20,13 +20,13 @@ return array (
     'groupid' => '1',
     'username' => 'admin',
     'gender' => '女',
-    'lastlogin' => '29分钟前',
+    'lastlogin' => '15分钟前',
     'credit2' => '0',
     'questions' => '1',
     'answers' => '0',
     'adopts' => '0',
     'grouptitle' => '超级管理员',
-    'avatar' => 'http://127.0.0.1/tipask/css/default/avatar.gif',
+    'avatar' => 'http://127.0.0.1/tipask_ backUp_20140828/css/default/avatar.gif',
   ),
 );
 ?>

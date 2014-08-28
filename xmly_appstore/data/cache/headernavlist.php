@@ -10,7 +10,7 @@ return array (
     'available' => '1',
     'type' => '1',
     'displayorder' => '1',
-    'format_url' => 'http://127.0.0.1/tipask/',
+    'format_url' => 'http://127.0.0.1/tipask_ backUp_20140828/',
   ),
   1 => 
   array (
@@ -22,7 +22,7 @@ return array (
     'available' => '1',
     'type' => '1',
     'displayorder' => '2',
-    'format_url' => 'http://127.0.0.1/tipask/?doing/default.html',
+    'format_url' => 'http://127.0.0.1/tipask_ backUp_20140828/?doing/default.html',
   ),
   2 => 
   array (
@@ -34,7 +34,7 @@ return array (
     'available' => '1',
     'type' => '1',
     'displayorder' => '3',
-    'format_url' => 'http://127.0.0.1/tipask/?c-all.html',
+    'format_url' => 'http://127.0.0.1/tipask_ backUp_20140828/?c-all.html',
   ),
   3 => 
   array (
@@ -46,7 +46,7 @@ return array (
     'available' => '1',
     'type' => '1',
     'displayorder' => '4',
-    'format_url' => 'http://127.0.0.1/tipask/?expert/default.html',
+    'format_url' => 'http://127.0.0.1/tipask_ backUp_20140828/?expert/default.html',
   ),
   4 => 
   array (
@@ -58,7 +58,7 @@ return array (
     'available' => '1',
     'type' => '1',
     'displayorder' => '5',
-    'format_url' => 'http://127.0.0.1/tipask/?topic/default.html',
+    'format_url' => 'http://127.0.0.1/tipask_ backUp_20140828/?topic/default.html',
   ),
   5 => 
   array (
@@ -70,7 +70,7 @@ return array (
     'available' => '1',
     'type' => '1',
     'displayorder' => '6',
-    'format_url' => 'http://127.0.0.1/tipask/?user/activelist.html',
+    'format_url' => 'http://127.0.0.1/tipask_ backUp_20140828/?user/activelist.html',
   ),
   6 => 
   array (
@@ -82,7 +82,7 @@ return array (
     'available' => '1',
     'type' => '1',
     'displayorder' => '7',
-    'format_url' => 'http://127.0.0.1/tipask/?gift/default.html',
+    'format_url' => 'http://127.0.0.1/tipask_ backUp_20140828/?gift/default.html',
   ),
   7 => 
   array (
@@ -94,7 +94,7 @@ return array (
     'available' => '1',
     'type' => '1',
     'displayorder' => '7',
-    'format_url' => 'http://127.0.0.1/tipask/?note/list.html',
+    'format_url' => 'http://127.0.0.1/tipask_ backUp_20140828/?note/list.html',
   ),
 );
 ?>
