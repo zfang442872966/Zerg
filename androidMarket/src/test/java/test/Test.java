@@ -3,7 +3,9 @@ package test;
 public class Test {
 
 	public static void main(String[] args) {
-		// System.out.println(Integer.toBinaryString(15));
+		System.out.println(Integer.toBinaryString(20000));
+		 System.out.println(Integer.toBinaryString(78));
+		 System.out.println(Integer.toBinaryString(32));
 		// System.out.println(Integer.toHexString(15));
 		// System.out.println(Integer.toOctalString(15));
 		// System.out.println(Integer.parseInt("D8", 16));
@@ -21,6 +23,9 @@ public class Test {
 		System.out.println(Math.pow(2, 20));
 		//80386CPU的地址总线为32
 		System.out.println(Math.pow(2, 32));
+		System.out.println("---------------------");
+		System.out.println(Integer.parseInt("8226", 16));
+		System.out.println(Integer.parseInt("FFFF", 16));
 		
 	}
 }
