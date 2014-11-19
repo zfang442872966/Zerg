@@ -159,7 +159,7 @@ public class Main {
 		JFrame frame = new JFrame("FlowLayoutDemo");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// Set up the content pane.
-		addComponentsToPane6(frame.getContentPane());
+		addComponentsToPane5(frame.getContentPane());
 		// Display the window.
 		frame.pack();
 		frame.setVisible(true);
